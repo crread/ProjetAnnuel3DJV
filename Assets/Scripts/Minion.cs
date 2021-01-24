@@ -1,43 +1,39 @@
 ﻿using UnityEngine;
-using Random = UnityEngine.Random;
 
-namespace MinionScripts
+public class Minion : MonoBehaviour
 {
-    public class Minion : MonoBehaviour
+    public bool follow = false;
+    public Transform minion;
+    public Transform objectToFollow;
+    public string typeMinion;
+
+    private void FixedUpdate()
     {
-        public bool followPlayer = false;
-        public Transform minion;
-        public Transform player;
-        public string typeMinion;
+        if (follow)
+        {
+            UpdatePosition(objectToFollow);
+        }
+    }
 
-        private void FixedUpdate()
-        {
-            if (followPlayer)
-            {
-                UpdatePosition();
-            }
-        }
-
-        public string GetTypeMinion()
-        {
-            return typeMinion;
-        }
+    public string GetTypeMinion()
+    {
+        return typeMinion;
+    }
     
-        public void SwitchFollowPlayerToTrue()
-        {
-            followPlayer = true;
-        }
+    public void SwitchFollowPlayerToTrue()
+    {
+        follow = true;
+    }
     
-        public void SwitchFollowPlayerToFalse()
+    public void SwitchFollowPlayerToFalse()
+    {
+        follow = false;
+    }
+    private void UpdatePosition(Transform positionToMove)
+    {
+        if (Vector3.SqrMagnitude(minion.position - positionToMove.position) > 4f)
         {
-            followPlayer = false;
-        }
-        private void UpdatePosition()
-        {
-            if (Vector3.SqrMagnitude(minion.position - player.position) > 4f)
-            {
-                minion.position = Vector3.MoveTowards(minion.position, player.position, Time.deltaTime + 0.01f);   
-            }
+            minion.position = Vector3.MoveTowards(minion.position, positionToMove.position, Time.deltaTime + 0.1f);   
         }
     }
 }

@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6624895-2787-4649-9ee8-d151de753089" name="Default Changelist" comment="" />
+    <list default="true" id="d6624895-2787-4649-9ee8-d151de753089" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
@@ -22,16 +41,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionInRangeMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionOutRangeMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Minion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/FireMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/WaterScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/Minion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Minion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1mDIze8Qzjz7OVQ3NPd6HAvPlU2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -85,6 +106,8 @@
       <workItem from="1610995898691" duration="2826000" />
       <workItem from="1611266262517" duration="1326000" />
       <workItem from="1611427396475" duration="2762000" />
+      <workItem from="1611491705922" duration="5428000" />
+      <workItem from="1611504532396" duration="4741000" />
     </task>
     <servers />
   </component>
@@ -93,10 +116,26 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1611507098449">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611507098449" />
     <state x="2274" y="236" width="1402" height="1027" key="dock-window-1" timestamp="1609206764824">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

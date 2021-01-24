@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using MinionScripts;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -8,6 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public NavMeshAgent targetAgent;
+    public Transform playerTransform;
     public Collider groundCollider;
     public Camera raycastCamera;
     public Text fireMinionsTargeted;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     private readonly Dictionary<string, List<GameObject>> _minionsListType = new Dictionary<string, List<GameObject>>();
     private readonly Dictionary<string, List<GameObject>> _minionsListTypeFollowing = new Dictionary<string, List<GameObject>>();
-    private List<GameObject> bufferMinionToMove = new List<GameObject>();
+    private readonly Dictionary<string, List<GameObject>> _minionsListBufferForFlag = new Dictionary<string, List<GameObject>>();
     private bool _disableMove = false;
     private void Start()
     {
@@ -63,7 +63,9 @@ public class Player : MonoBehaviour
             {
                 if (!_minionsListTypeFollowing[minionList.Key].Contains(minion))
                 {
-                    minion.GetComponent<Minion>().SwitchFollowPlayerToTrue();
+                    Minion minionScript = minion.GetComponent<Minion>();
+                    minionScript.objectToFollow = playerTransform;
+                    minionScript.SwitchFollowPlayerToTrue();
                     _minionsListTypeFollowing[minionList.Key].Add(minion);   
                 }
             }
@@ -71,30 +73,28 @@ public class Player : MonoBehaviour
         UpdateFieldText();
     }
 
-    public void LoadMinionBuffer(int nbMinionsWater, int nbMinionsAir, int nbMinionsEarth, int nbMinionsFire)
+    public void LoadMinionBuffer(Dictionary<string, int> minionsSelected)
     {
-        /*
-        bufferMinionToMove += _minionsListTypeFollowing["water"].GetRange(0, nbMinionsWater);
-        bufferMinionToMove += _minionsListTypeFollowing["air"].GetRange(0, nbMinionsAir);
-        bufferMinionToMove += _minionsListTypeFollowing["earth"].GetRange(0, nbMinionsEarth);
-        bufferMinionToMove += _minionsListTypeFollowing["fire"].GetRange(0, nbMinionsFire);
-        */
+        InitMinionsListBuffer();
+        foreach (var typeList in _minionsListBufferForFlag.ToList())
+        {
+            _minionsListBufferForFlag[typeList.Key] =_minionsListTypeFollowing[typeList.Key].GetRange(0, minionsSelected[typeList.Key]);
+        }
     }
-    
+
     public void RemoveMinionInArea(GameObject minion)
     {
         var minionsType = minion.GetComponent<Minion>().GetTypeMinion();
         
         if (_minionsListType[minionsType].Contains(minion))
         {
-            if (minion.GetComponent<Minion>().followPlayer)
+            if (minion.GetComponent<Minion>().follow)
             {
                 minion.GetComponent<Minion>().SwitchFollowPlayerToFalse();
                 _minionsListTypeFollowing[minionsType].Remove(minion);
             }
             _minionsListType[minionsType].Remove(minion);
         }
-        UpdateFieldText();
     }
     
     public void AddMinionInArea(GameObject minion)
@@ -106,12 +106,40 @@ public class Player : MonoBehaviour
             _minionsListType[minionsType].Add(minion);
         }
     }
-
-    private void UpdateFieldText()
+    
+    public void UpdateFieldText()
     {
         fireMinionsTargeted.text = _minionsListTypeFollowing["fire"].Count.ToString();
         airMinionsTargeted.text = _minionsListTypeFollowing["air"].Count.ToString();
         waterMinionsTargeted.text = _minionsListTypeFollowing["water"].Count.ToString();
         earthMinionsTargeted.text = _minionsListTypeFollowing["earth"].Count.ToString();
+    }
+
+    public Dictionary<string, List<GameObject>> GetMinionsListBufferForFlag()
+    {
+        return _minionsListBufferForFlag;
+    }
+
+    public void ClearMinionForFlagBuffer(GameObject flag)
+    {
+        foreach (var minionList in _minionsListTypeFollowing)
+        {
+            foreach (var minion in minionList.Value.ToList())
+            {
+                if (_minionsListBufferForFlag[minionList.Key].Contains(minion))
+                {
+                    minion.GetComponent<Minion>().objectToFollow = flag.transform;
+                    _minionsListTypeFollowing[minionList.Key].Remove(minion);
+                    _minionsListBufferForFlag[minionList.Key].Remove(minion);
+                }
+            }
+        }
+    }
+    private void InitMinionsListBuffer()
+    {
+        _minionsListBufferForFlag.Add("air", new List<GameObject>());
+        _minionsListBufferForFlag.Add("fire", new List<GameObject>());
+        _minionsListBufferForFlag.Add("water", new List<GameObject>());
+        _minionsListBufferForFlag.Add("earth", new List<GameObject>());
     }
 }
