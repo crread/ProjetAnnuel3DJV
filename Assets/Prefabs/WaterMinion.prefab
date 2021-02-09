@@ -107,10 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48680db530180664daf0532a388e0994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 0
+  follow: 0
   minion: {fileID: 8367413821461896113}
-  player: {fileID: 0}
+  objectToFollow: {fileID: 0}
   typeMinion: water
+  rb: {fileID: 2996995400619711384}
 --- !u!54 &2996995400619711384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 6100091322659904233}
   m_Layer: 0
   m_Name: WaterMinion
-  m_TagString: Untagged
+  m_TagString: minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

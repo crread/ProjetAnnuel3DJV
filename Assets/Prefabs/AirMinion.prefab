@@ -107,10 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48680db530180664daf0532a388e0994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 0
+  follow: 0
   minion: {fileID: 513405946275443122}
-  player: {fileID: 0}
+  objectToFollow: {fileID: 0}
   typeMinion: air
+  rb: {fileID: 2788928859248249236}
 --- !u!54 &2788928859248249236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 4774991926254988736}
   m_Layer: 0
   m_Name: AirMinion
-  m_TagString: Untagged
+  m_TagString: minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,16 +7,31 @@
   <component name="ChangeListManager">
     <list default="true" id="d6624895-2787-4649-9ee8-d151de753089" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AirMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AirMinion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EarthMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EarthMinion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireMinion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionInRangeMinion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionInRangeMinion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionOutRangeMinion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionOutRangeMinion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +42,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/07/dc2f6163/Material.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/b1/068d6219/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/de/255bc297/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/0c/bdc46187/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -44,10 +59,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/FireMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/WaterScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinionScripts/Minion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Flag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Minion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FlagEventCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/MouseHover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Main.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/CameraControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/FlagEventCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/TriggerDetectionInRangeMinion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/TriggerDetectionOutRangeMinion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Flag/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Flag/FlagEventCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/Minion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/TriggerDetectionInRangeMinion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/TriggerDetectionOutRangeMinion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" />
       </list>
     </option>
   </component>
@@ -62,9 +97,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Nouveau dossier (2)\Proto Projet annuel.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Berthelot\Desktop\Nouveau dossier (2)" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -107,7 +151,14 @@
       <workItem from="1611266262517" duration="1326000" />
       <workItem from="1611427396475" duration="2762000" />
       <workItem from="1611491705922" duration="5428000" />
-      <workItem from="1611504532396" duration="4741000" />
+      <workItem from="1611504532396" duration="8995000" />
+      <workItem from="1611525688207" duration="2649000" />
+      <workItem from="1611528640350" duration="2421000" />
+      <workItem from="1612289920073" duration="133000" />
+      <workItem from="1612290188421" duration="53000" />
+      <workItem from="1612527442694" duration="4284000" />
+      <workItem from="1612713033006" duration="4979000" />
+      <workItem from="1612903148661" duration="6305000" />
     </task>
     <servers />
   </component>
@@ -132,10 +183,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1611507098449">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1612528064300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1611507098449" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612528064300" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1612290078792">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612290078792" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1612716103441">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612716103441" />
     <state x="2274" y="236" width="1402" height="1027" key="dock-window-1" timestamp="1609206764824">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -144,9 +203,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="534" y="0" width="1402" height="1027" maximized="true" key="dock-window-2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1609206764824" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1609028003888">
+    <state x="639" y="237" width="642" height="566" key="find.popup" timestamp="1612714670335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="639" y="237" width="642" height="566" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612714670335" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1612716167543">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612716167543" />
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609028003888" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609206639397">
       <screen x="0" y="0" width="1920" height="1040" />

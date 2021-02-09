@@ -107,10 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48680db530180664daf0532a388e0994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followPlayer: 0
+  follow: 0
   minion: {fileID: 7468770798703630898}
-  player: {fileID: 0}
+  objectToFollow: {fileID: 0}
   typeMinion: earth
+  rb: {fileID: 3356332189392227987}
 --- !u!54 &3356332189392227987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 2402033128675405721}
   m_Layer: 0
   m_Name: EarthMinion
-  m_TagString: Untagged
+  m_TagString: minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
