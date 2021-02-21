@@ -7,31 +7,32 @@
   <component name="ChangeListManager">
     <list default="true" id="d6624895-2787-4649-9ee8-d151de753089" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proto Projet annuel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/AirMinionMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/AirMinionMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AirMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AirMinion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EarthMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EarthMinion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireMinion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoublDoor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoublDoor/DoorPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoublDoor/DoorPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoublDoor/DoorRoot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DoublDoor/DoorRoot.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flag.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Minion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionInRangeMinion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionInRangeMinion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionOutRangeMinion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerDetectionOutRangeMinion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/FlagEventCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/FlagEventCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/MouseHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/MouseHover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +43,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/EndZoneScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/07/dc2f6163/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/b1/068d6219/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../[Exemple] Carrefour_ Sans Object Pooling/Assets/Carrefour/Scripts/CustomUnityEvents/ClientSpawnedUnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/de/255bc297/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/0c/bdc46187/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -79,10 +83,24 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/Minion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/TriggerDetectionInRangeMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/Minions/TriggerDetectionOutRangeMinion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ColliderSwitchIn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ColliderSwitchOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/MouseHover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/Main.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchIn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/Switch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Flag/FlagEventCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/rockCollisionTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Ball.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/EndZoneScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
       </list>
     </option>
   </component>
@@ -158,7 +176,15 @@
       <workItem from="1612290188421" duration="53000" />
       <workItem from="1612527442694" duration="4284000" />
       <workItem from="1612713033006" duration="4979000" />
-      <workItem from="1612903148661" duration="6305000" />
+      <workItem from="1612903148661" duration="6755000" />
+      <workItem from="1612991306523" duration="1635000" />
+      <workItem from="1612994126876" duration="1128000" />
+      <workItem from="1613591973663" duration="2219000" />
+      <workItem from="1613687853465" duration="4622000" />
+      <workItem from="1613766660931" duration="6188000" />
+      <workItem from="1613822747902" duration="9256000" />
+      <workItem from="1613844104349" duration="1062000" />
+      <workItem from="1613937708414" duration="2480000" />
     </task>
     <servers />
   </component>
@@ -187,14 +213,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612528064300" />
+    <state x="724" y="161" key="RiderGenerateDialog" timestamp="1613826745475">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="724" y="161" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1613826745475" />
     <state x="2381" y="165" key="SettingsEditor" timestamp="1612290078792">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612290078792" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1612716103441">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1612995265106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612716103441" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612995265106" />
     <state x="2274" y="236" width="1402" height="1027" key="dock-window-1" timestamp="1609206764824">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

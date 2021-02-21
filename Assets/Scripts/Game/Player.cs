@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 using System.Linq;
 using Map.Minions;
-using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 namespace Game
 {
@@ -37,10 +37,9 @@ namespace Game
 
         private void Update()
         {
-            if (Input.GetMouseButton(0) && !_disableMove )
+            if (Input.GetMouseButton(0) && !_disableMove)
             {
                 var ray = raycastCamera.ScreenPointToRay(Input.mousePosition);
-
                 foreach (var ground in groundCollider)
                 {
                     if (ground.Raycast(ray, out var hit, float.MaxValue))
@@ -49,9 +48,7 @@ namespace Game
                         break;
                     }
                 }
-                
             }
-
             if (Input.GetKeyDown(KeyCode.Space))
             { 
                 MakeMinionsFollow();

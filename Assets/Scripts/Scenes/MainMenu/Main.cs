@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MainMenu
+namespace Scenes.MainMenu
 {
     public class Main : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace MainMenu
             {
                 SceneManager.LoadScene("firstMap");
             }
-            else
+            if (isQuit)
             {
                 Application.Quit();
             }

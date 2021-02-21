@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-namespace Map.Flag
+namespace Game.Flag
 {
     public class FlagEventCollider : MonoBehaviour
     {
-        public global::Game.Flag.Flag flag;
+        public Flag flag;
 
-        private void OnCollisionExit(Collision minion)
+        private void OnTriggerExit(Collider minion)
         {
             if (minion.gameObject.CompareTag($"minion"))
             {

@@ -45,8 +45,6 @@ namespace Game.Flag
         public void RemoveMinion(GameObject minion)
         {
             var typeMinion = minion.GetComponent<Minion>().GetTypeMinion();
-            //Debug.Log(_minionsOnFlag.ContainsKey(typeMinion));
-            //Debug.Log(_minionsOnFlag.Contains<>(minion));
             if (_minionsOnFlag.ContainsKey(typeMinion) && _minionsOnFlag[typeMinion].Contains(minion))
             {
                 Debug.Log("test");

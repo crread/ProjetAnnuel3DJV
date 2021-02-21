@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MainMenu
+namespace Scenes.MainMenu
 {
     public class MouseHover : MonoBehaviour
     {

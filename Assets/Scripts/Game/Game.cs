@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -9,18 +11,33 @@ namespace Game
         public Player player;
         public GameObject minionCanvasSelections;
         public GameObject prefabFlag;
-        public Collider groundCollider;
+        public List<Collider> groundCollider = new List<Collider>();
         public Camera raycastCamera;
         public InputField airInput;
         public InputField earthInput;
         public InputField waterInput;
         public InputField fireInput;
-
+        public Text timerText;
+        public float timerInSeconds = 180;
+        
         private bool _putFlag = false;
-        private List<global::Game.Flag.Flag> _flagsList = new List<global::Game.Flag.Flag>();
+        private readonly List<Flag.Flag> _flagsList = new List<Flag.Flag>();
+        private int _timerMinutesLeft;
+        private int _timerSecondsLeft;
 
         private void Update()
         {
+            if (timerInSeconds > 0)
+            {
+                timerInSeconds -= Time.deltaTime;
+                DisplayTimer();
+            }
+            else
+            {
+                timerInSeconds = 0;
+                SceneManager.LoadScene("LoseMenu");
+            }
+            
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 player.UpdateMoveOption(true);
@@ -37,27 +54,32 @@ namespace Game
             if (Input.GetMouseButton(0) && _putFlag)
             {
                 var ray = raycastCamera.ScreenPointToRay(Input.mousePosition);
-
-                if (groundCollider.Raycast(ray, out var hit, float.MaxValue))
+                foreach (var ground in groundCollider)
                 {
-                    GameObject newFlag = Instantiate(prefabFlag, hit.point, Quaternion.identity);
-                    newFlag.GetComponent<global::Game.Flag.Flag>().SetMinionsOnFlag(player.GetMinionsListBufferForFlag());
-                    player.ClearMinionForFlagBuffer(newFlag);
-                    _flagsList.Add(newFlag.GetComponent<global::Game.Flag.Flag>());
-                    player.UpdateMoveOption(false);
-                    _putFlag = false;
+                    if (ground.Raycast(ray, out var hit, float.MaxValue))
+                    {
+                        GameObject newFlag = Instantiate(prefabFlag, hit.point, Quaternion.identity);
+                        newFlag.GetComponent<global::Game.Flag.Flag>().SetMinionsOnFlag(player.GetMinionsListBufferForFlag());
+                        player.ClearMinionForFlagBuffer(newFlag);
+                        _flagsList.Add(newFlag.GetComponent<global::Game.Flag.Flag>());
+                        player.UpdateMoveOption(false);
+                        _putFlag = false;
+                        break;
+                    }
                 }
             }
         }
 
+        private void DisplayTimer()
+        {
+            _timerMinutesLeft = Mathf.CeilToInt(timerInSeconds / 60) - 1 < 0 ? 0 : Mathf.CeilToInt(timerInSeconds / 60) - 1;
+            _timerSecondsLeft = Mathf.CeilToInt(timerInSeconds % 60);
+            timerText.text = $"{_timerMinutesLeft:00}:{_timerSecondsLeft:00}";
+        }
         public List<global::Game.Flag.Flag> GetFlagList()
         {
             return _flagsList;
         }
-        /**
-    * !TODO make a control for inputs before to catch them
-     * this part control if input data can be convert in int or not (don't used yet, must be implemented in reste of the code)
-    */
         public void ValidationInput()
         {
             minionCanvasSelections.SetActive(false);

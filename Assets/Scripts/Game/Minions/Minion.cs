@@ -40,7 +40,7 @@ namespace Map.Minions
         {
             if (Vector3.SqrMagnitude(minion.position - positionToMove.position) > 10f)
             {
-                transform.position = Vector3.MoveTowards(minion.position, positionToMove.position, 0.1f);
+                transform.position = Vector3.MoveTowards(minion.position, positionToMove.position, 0.13f);
             }
             else
             {
