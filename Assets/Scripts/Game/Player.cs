@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
-using Map.Minions;
+using Game.Minions;
 using UnityEngine.AI;
 
 namespace Game
@@ -70,7 +70,6 @@ namespace Game
                     {
                         Minion minionScript = minion.GetComponent<Minion>();
                         minionScript.objectToFollow = playerTransform;
-                        minionScript.SwitchFollowPlayerToTrue();
                         _minionsListTypeFollowing[minionList.Key].Add(minion);   
                     }
                 }
@@ -92,13 +91,12 @@ namespace Game
 
         public void RemoveMinionInArea(GameObject minion)
         {
-            var minionsType = minion.GetComponent<Minion>().GetTypeMinion();
+            var minionsType = minion.GetComponent<Minion>().typeMinion;
         
             if (_minionsListType[minionsType].Contains(minion))
             {
                 if (minion.GetComponent<Minion>().follow)
                 {
-                    minion.GetComponent<Minion>().SwitchFollowPlayerToFalse();
                     _minionsListTypeFollowing[minionsType].Remove(minion);
                 }
                 _minionsListType[minionsType].Remove(minion);
@@ -107,7 +105,7 @@ namespace Game
     
         public void AddMinionInArea(GameObject minion)
         {
-            var minionsType = minion.GetComponent<Minion>().GetTypeMinion();
+            var minionsType = minion.GetComponent<Minion>().typeMinion;
         
             if (!_minionsListType[minionsType].Contains(minion))
             {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -18,7 +17,7 @@ namespace Game
         public InputField waterInput;
         public InputField fireInput;
         public Text timerText;
-        public float timerInSeconds = 180;
+        public float timerInSeconds;
         
         private bool _putFlag = false;
         private readonly List<Flag.Flag> _flagsList = new List<Flag.Flag>();
@@ -72,14 +71,11 @@ namespace Game
 
         private void DisplayTimer()
         {
-            _timerMinutesLeft = Mathf.CeilToInt(timerInSeconds / 60) - 1 < 0 ? 0 : Mathf.CeilToInt(timerInSeconds / 60) - 1;
-            _timerSecondsLeft = Mathf.CeilToInt(timerInSeconds % 60);
+            _timerMinutesLeft = Mathf.FloorToInt(timerInSeconds / 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds / 60);
+            _timerSecondsLeft = Mathf.FloorToInt(timerInSeconds % 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds % 60);
             timerText.text = $"{_timerMinutesLeft:00}:{_timerSecondsLeft:00}";
         }
-        public List<global::Game.Flag.Flag> GetFlagList()
-        {
-            return _flagsList;
-        }
+        public List<global::Game.Flag.Flag> GetFlagList() => _flagsList;
         public void ValidationInput()
         {
             minionCanvasSelections.SetActive(false);

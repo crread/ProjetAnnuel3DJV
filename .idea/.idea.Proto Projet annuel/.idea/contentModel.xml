@@ -8,9 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
-            <e p="Ball.cs" t="Include" />
             <e p="CameraControl.cs" t="Include" />
-            <e p="Door.cs" t="Include" />
             <e p="EndZoneScript.cs" t="Include" />
             <e p="Flag" t="Include">
               <e p="Flag.cs" t="Include" />
@@ -22,13 +20,13 @@
               <e p="TriggerDetectionInRangeMinion.cs" t="Include" />
               <e p="TriggerDetectionOutRangeMinion.cs" t="Include" />
             </e>
+            <e p="Obstacle.cs" t="Include" />
             <e p="Player.cs" t="Include" />
-            <e p="rockCollisionTrigger.cs" t="Include" />
             <e p="Switch" t="Include">
-              <e p="ColliderSwitchIn.cs" t="Include" />
-              <e p="ColliderSwitchOut.cs" t="Include" />
               <e p="Switch.cs" t="Include" />
+              <e p="SwitchCollider.cs" t="Include" />
             </e>
+            <e p="TriggerAreaCollision.cs" t="Include" />
           </e>
           <e p="Scenes" t="Include">
             <e p="MainMenu" t="Include">
