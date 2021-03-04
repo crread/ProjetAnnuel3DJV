@@ -1,23 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scenes.MainMenu
 {
     public class MouseHover : MonoBehaviour
     {
-        public TextMesh text;
-        void Start()
+        public GameObject Button;
+
+        private Text _text;
+
+        private void Start()
         {
-            text.color = new Color(0.6980392f, 0.4823529f, 0.4823529f);
+            _text = Button.GetComponent<Text>();
         }
 
-        public void OnMouseEnter()
+        private void OnMouseOver()
         {
-            text.color = Color.red;
+            Debug.Log("test hover");
         }
 
-        public void OnMouseExit()
+        private void OnMouseEnter()
         {
-            text.color = new Color(0.6980392f, 0.4823529f, 0.4823529f);
+            Debug.Log("test");
+            _text.color = Color.red;
+        }
+
+        private void OnMouseExit()
+        {
+            _text.color = new Color(0.6980392f, 0.4823529f, 0.4823529f);
         }
     }
 }
