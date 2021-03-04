@@ -15,6 +15,8 @@ namespace Game.Minions
             if (objectToFollow != null)
             {
                 UpdatePosition(objectToFollow);   
+                
+                
             }
         }
         
