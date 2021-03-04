@@ -1,33 +1,29 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Scenes.MainMenu
 {
-    public class MouseHover : MonoBehaviour
+    public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        public GameObject Button;
+        public Text text;
 
-        private Text _text;
+        private Color _initColor;
 
         private void Start()
         {
-            _text = Button.GetComponent<Text>();
+            _initColor = text.color;
         }
 
-        private void OnMouseOver()
+        public void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log("test hover");
+            text.color = Color.red;
         }
 
-        private void OnMouseEnter()
+        public void OnPointerExit(PointerEventData eventData)
         {
-            Debug.Log("test");
-            _text.color = Color.red;
-        }
-
-        private void OnMouseExit()
-        {
-            _text.color = new Color(0.6980392f, 0.4823529f, 0.4823529f);
+            text.color = _initColor;
         }
     }
 }

@@ -58,16 +58,6 @@ namespace Game.Switch
             }
         }
 
-        private void ControlMinionsInArea()
-        {
-            if (_minionsOnArea >= numberToTrigger)
-            {
-                enoughMinion = true;
-            }
-            else
-            {
-                enoughMinion = false;
-            }
-        }
+        private void ControlMinionsInArea() => enoughMinion = _minionsOnArea >= numberToTrigger;
     }
 }
