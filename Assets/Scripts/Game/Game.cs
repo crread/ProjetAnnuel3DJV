@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,14 @@ namespace Game
         private readonly List<Flag.Flag> _flagsList = new List<Flag.Flag>();
         private int _timerMinutesLeft;
         private int _timerSecondsLeft;
+        private string _sceneName;
+
+        private void Awake()
+        {
+            var scene = SceneManager.GetActiveScene();
+            _sceneName = scene.name;
+            Debug.Log(_sceneName);
+        }
 
         private void Update()
         {
