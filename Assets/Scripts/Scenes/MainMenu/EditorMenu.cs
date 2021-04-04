@@ -10,9 +10,12 @@ namespace Scenes.MainMenu
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            
+            Debug.Log(SceneManager.sceneCount);
             _testScene = SceneManager.CreateScene("test");
-            SceneManager.LoadScene("test");
+            Debug.Log(SceneManager.sceneCount);
+            Debug.Log(_testScene.path);
+            Debug.Log(_testScene.name);
+            Debug.Log(_testScene.buildIndex);
         }
     }
 }

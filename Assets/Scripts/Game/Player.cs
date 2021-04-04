@@ -17,7 +17,9 @@ namespace Game
         public Text airMinionsTargeted;
         public Text earthMinionsTargeted;
         public Text waterMinionsTargeted;
-
+        
+        public Animator characterAnimator;
+        private bool _isRunning;
         private readonly Dictionary<string, List<GameObject>> _minionsListType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> _minionsListTypeFollowing = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> _minionsListBufferForFlag = new Dictionary<string, List<GameObject>>();
@@ -33,6 +35,8 @@ namespace Game
             _minionsListTypeFollowing.Add("fire", new List<GameObject>());
             _minionsListTypeFollowing.Add("water", new List<GameObject>());
             _minionsListTypeFollowing.Add("earth", new List<GameObject>());
+            
+            _isRunning = false;
         }
 
         private void Update()
@@ -45,6 +49,12 @@ namespace Game
                     if (ground.Raycast(ray, out var hit, float.MaxValue))
                     {
                         targetAgent.SetDestination(hit.point);
+                        characterAnimator.SetBool("isRunning", true);
+                        break;
+                    }
+                    else
+                    {
+                        characterAnimator.SetBool("isRunning", false);
                         break;
                     }
                 }
