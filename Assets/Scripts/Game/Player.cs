@@ -52,11 +52,6 @@ namespace Game
                         characterAnimator.SetBool("isRunning", true);
                         break;
                     }
-                    else
-                    {
-                        characterAnimator.SetBool("isRunning", false);
-                        break;
-                    }
                 }
             }
             if (Input.GetKeyDown(KeyCode.Space))
@@ -135,6 +130,7 @@ namespace Game
         {
             return _minionsListBufferForFlag;
         }
+
 
         public void ClearMinionForFlagBuffer(GameObject flag)
         {
