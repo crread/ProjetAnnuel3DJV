@@ -46,7 +46,8 @@ namespace Scenes.MainMenu
                     GetComponentInParent<Canvas>().gameObject.SetActive(false);
                     break;
                 case ListOfInteraction.Editor :
-                    Debug.Log("Work in progress");
+                    canvasToOpen.SetActive(true);
+                    GetComponentInParent<Canvas>().gameObject.SetActive(false);
                     break;
                 case ListOfInteraction.Options :
                     canvasToOpen.SetActive(true);
