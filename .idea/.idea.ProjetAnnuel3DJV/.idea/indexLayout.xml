@@ -29,6 +29,7 @@
       <Path>Prefabs</Path>
       <Path>Scenes</Path>
       <Path>Scripts</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
