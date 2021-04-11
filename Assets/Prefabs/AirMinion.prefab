@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7319944145443108936
+--- !u!1 &3679979934900581839
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 513405946275443122}
-  - component: {fileID: 2692044855443290131}
-  - component: {fileID: 587066606912717536}
-  - component: {fileID: 3574543812646498152}
-  - component: {fileID: 1094979242428561173}
-  - component: {fileID: 2788928859248249236}
+  - component: {fileID: 5880500270182726709}
+  - component: {fileID: 8347510568002467220}
+  - component: {fileID: 6818992848285765479}
+  - component: {fileID: 7430680461688120047}
+  - component: {fileID: 8083965932714951699}
+  - component: {fileID: 97985182107969821}
   m_Layer: 10
-  m_Name: Minion
+  m_Name: AirMinion
   m_TagString: minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &513405946275443122
+--- !u!4 &5880500270182726709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
+  m_GameObject: {fileID: 3679979934900581839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4774991926254988736}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2692044855443290131
+--- !u!33 &8347510568002467220
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
+  m_GameObject: {fileID: 3679979934900581839}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &587066606912717536
+--- !u!23 &6818992848285765479
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
+  m_GameObject: {fileID: 3679979934900581839}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,43 +82,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &3574543812646498152
+--- !u!135 &7430680461688120047
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
+  m_GameObject: {fileID: 3679979934900581839}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1094979242428561173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48680db530180664daf0532a388e0994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  follow: 0
-  minion: {fileID: 513405946275443122}
-  objectToFollow: {fileID: 0}
-  typeMinion: air
-  rb: {fileID: 2788928859248249236}
---- !u!54 &2788928859248249236
+--- !u!54 &8083965932714951699
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7319944145443108936}
+  m_GameObject: {fileID: 3679979934900581839}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -128,34 +111,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!1 &8126336340152564940
-GameObject:
+--- !u!114 &97985182107969821
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4774991926254988736}
-  m_Layer: 0
-  m_Name: AirMinion
-  m_TagString: minion
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4774991926254988736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8126336340152564940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 513405946275443122}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3679979934900581839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48680db530180664daf0532a388e0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow: 0
+  minion: {fileID: 5880500270182726709}
+  objectToFollow: {fileID: 0}
+  typeMinion: air
+  rb: {fileID: 8083965932714951699}

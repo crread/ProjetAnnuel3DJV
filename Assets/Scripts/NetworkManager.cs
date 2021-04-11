@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Text;
-using Classes;
 using Entity;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -37,11 +36,11 @@ public class NetworkManager : MonoBehaviour
         {
             if (req.isNetworkError || req.isHttpError)
             {
-                GetComponent<DDOL>().responseRequest = JsonConvert.DeserializeObject<ResponseRequestEntity>(req.downloadHandler.text);
+                GetComponent<DDOL>().responseRequest = JsonConvert.DeserializeObject<ResponseRequestEntity>(req.downloadHandler.text); 
                 GetComponent<DDOL>().responseRequest.httpCode = req.responseCode;
             }
-            else
-            {
+            else 
+            { 
                 GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
             }
         }, json);

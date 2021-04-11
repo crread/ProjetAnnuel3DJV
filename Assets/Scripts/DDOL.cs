@@ -1,5 +1,4 @@
-﻿using Classes;
-using Entity;
+﻿using Entity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

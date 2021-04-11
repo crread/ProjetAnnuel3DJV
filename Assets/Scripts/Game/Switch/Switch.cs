@@ -18,12 +18,11 @@ namespace Game.Switch
         {
             _counterTextGameObject = new GameObject();
             _counterTextMesh = _counterTextGameObject.AddComponent<TextMesh>();
-            _counterTextGameObject.AddComponent<MeshRenderer>();
             _counterTextMesh.text = $"{_minionsOnArea}/{numberToTrigger}";
             _counterTextMesh.color = Color.red;
             _counterTextMesh.anchor = TextAnchor.MiddleCenter;
             _counterTextMesh.fontSize = 26;
-            var switchPosition = this.GetComponent<Transform>().position;
+            var switchPosition = GetComponent<Transform>().position;
             _counterTextGameObject.transform.position = new Vector3(switchPosition.x, switchPosition.y + 5, switchPosition.z);
             _counterTextGameObject.transform.LookAt(player.transform.position);
             

@@ -23,17 +23,11 @@ namespace Game
             switch (typeInteraction)
             {
                 case ListOfInteraction.PlayAnimation:
-                    if (GetComponent<Animator>() != null)
-                    {
-                        _selfAnimation = GetComponent<Animator>();   
-                    }
+                    _selfAnimation = GetComponent<Animator>();
                     break;
                 case ListOfInteraction.ActiveGravity:
-                    if (GetComponent<Rigidbody>() != null)
-                    {
-                        _selfRigidbody = GetComponent<Rigidbody>();
-                        _selfRigidbody.useGravity = false;
-                    }
+                    _selfRigidbody = GetComponent<Rigidbody>();
+                    _selfRigidbody.useGravity = false;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -75,7 +69,7 @@ namespace Game
         
         private void PlayAnimation()
         {
-            if (_selfAnimation != null)
+            if (_selfAnimation)
             {
                 _selfAnimation.SetTrigger(_isTriggered ? "OpenDoor" : "CloseDoor");   
             }
@@ -83,9 +77,9 @@ namespace Game
         
         private void ActiveGravity()
         {
-            if (_selfRigidbody != null && _isTriggered)
+            if (_selfRigidbody && _isTriggered)
             {
-                _selfRigidbody.useGravity = true;   
+                _selfRigidbody.useGravity = true;
             }
         }
     }

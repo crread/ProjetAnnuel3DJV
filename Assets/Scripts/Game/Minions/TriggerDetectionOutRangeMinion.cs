@@ -5,11 +5,17 @@ namespace Game.Minions
     public class TriggerDetectionOutRangeMinion : MonoBehaviour
     {
         public Player playerScript;
+        public Game gameScript;
         private void OnTriggerExit(Collider minion)
         {
-            if (minion.gameObject.CompareTag($"minion"))
+            var minionScript = minion.GetComponent<Minion>();
+            
+            if (minion.gameObject.CompareTag($"minion") && minionScript.instanceIdObjectToFollow == playerScript.currentId)
             {
-                playerScript.RemoveMinionInArea(minion.gameObject);
+                minionScript.objectToFollow = null;
+                minionScript.instanceIdObjectToFollow = 0;
+                playerScript.MinusMinions(minionScript.typeMinion);
+                gameScript.UpdateFieldsMaximumCanvas();
             }
         }
     }

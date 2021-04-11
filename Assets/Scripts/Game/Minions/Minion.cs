@@ -4,27 +4,30 @@ namespace Game.Minions
 {
     public class Minion : MonoBehaviour
     {
-        public bool follow = false;
         public Transform minion;
         public Transform objectToFollow;
+        public int instanceIdObjectToFollow;
         public string typeMinion;
         public Rigidbody rb;
 
+        public void ChangePosition(Transform newObjectToFollowPosition)
+        {
+            objectToFollow = newObjectToFollowPosition;
+        }
+        
         private void FixedUpdate()
         {
             if (objectToFollow != null)
             {
-                UpdatePosition(objectToFollow);   
-                
-                
+                UpdatePosition();
             }
         }
         
-        private void UpdatePosition(Transform positionToMove)
+        private void UpdatePosition()
         {
-            if (Vector3.Distance(minion.position, positionToMove.position) > 4f)
+            if (Vector3.Distance(minion.position, objectToFollow.position) > 4f)
             {
-                transform.position = Vector3.MoveTowards(minion.position, positionToMove.position, 0.13f);
+                transform.position = Vector3.MoveTowards(minion.position, objectToFollow.position, 0.13f);
             }
             else
             {

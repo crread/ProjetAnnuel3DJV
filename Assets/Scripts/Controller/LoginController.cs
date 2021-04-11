@@ -1,5 +1,4 @@
-﻿using System;
-using Entity;
+﻿using Entity;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,12 +13,14 @@ namespace Controller
         public InputField password;
         public GameObject mainMenuCanvas;
         public GameObject loginCanvas;
-
+        public GameObject errorMessage;
+        
         private Color _initColor;
         
         public void Start()
         {
             _initColor = text.color;
+            errorMessage.SetActive(false);
         }
 
         /// <summary>
@@ -28,20 +29,26 @@ namespace Controller
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            LoginEntity loginData = new LoginEntity(email.text, password.text);
             GameObject preload = GameObject.Find("Preload");
-
-            preload.GetComponent<DDOL>().networkManager.GetUser(JsonConvert.SerializeObject(loginData));
             
-            if (preload.GetComponent<DDOL>().player != null)
+            if (preload.GetComponent<DDOL>().networkManager.isNetworkAvailable)
             {
-                loginCanvas.SetActive(false);
-                mainMenuCanvas.SetActive(true);
-            }
-            else
-            {
-                Debug.Log(preload.GetComponent<DDOL>().responseRequest.httpCode);
-                Debug.Log(preload.GetComponent<DDOL>().responseRequest.detail);   
+                LoginEntity loginData = new LoginEntity(email.text, password.text);
+
+                preload.GetComponent<DDOL>().networkManager.GetUser(JsonConvert.SerializeObject(loginData));
+            
+                if (preload.GetComponent<DDOL>().player != null)
+                {
+                    loginCanvas.SetActive(false);
+                    mainMenuCanvas.SetActive(true);
+                }
+                else
+                {
+                    if (preload.GetComponent<DDOL>().responseRequest.httpCode == 401)
+                    {
+                        errorMessage.SetActive(true);
+                    }
+                }
             }
         }
 
