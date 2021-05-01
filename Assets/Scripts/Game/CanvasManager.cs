@@ -15,6 +15,15 @@ namespace Game
         public MinionSelectorField fireField;
         public MinionSelectorField waterField;
         
+        public GameObject airSelectedBackgroundFlag;
+        public GameObject earthSelectedBackgroundFlag;
+        public GameObject waterSelectedBackgroundFlag;
+        public GameObject fireSelectedBackgroundFlag;
+        public MinionSelectorField airFieldFlag;
+        public MinionSelectorField earthFieldFlag;
+        public MinionSelectorField fireFieldFlag;
+        public MinionSelectorField waterFieldFlag;
+        
         private int _timerMinutesLeft;
         private int _timerSecondsLeft;
         
@@ -40,6 +49,18 @@ namespace Game
                 case "air":
                     airSelectedBackground.SetActive(true);
                     break;
+                case "fireFlag":
+                    fireSelectedBackgroundFlag.SetActive(true);
+                    break;
+                case "waterFlag":
+                    waterSelectedBackgroundFlag.SetActive(true);
+                    break;
+                case "earthFlag":
+                    earthSelectedBackgroundFlag.SetActive(true);
+                    break;
+                case "airFlag":
+                    airSelectedBackgroundFlag.SetActive(true);
+                    break;
             }
         }
         
@@ -56,6 +77,10 @@ namespace Game
             earthSelectedBackground.SetActive(false);
             waterSelectedBackground.SetActive(false);
             fireSelectedBackground.SetActive(false);
+            airSelectedBackgroundFlag.SetActive(false);
+            earthSelectedBackgroundFlag.SetActive(false);
+            waterSelectedBackgroundFlag.SetActive(false);
+            fireSelectedBackgroundFlag.SetActive(false);
         }
     }
 }

@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5535186342051910646}
   - component: {fileID: 5535186342051910643}
-  - component: {fileID: 5535186342051910640}
   - component: {fileID: 5535186342051910641}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,19 +45,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5535186342051910640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5535186342051910647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e6034903b4e124f8c0b841ada0f5cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchButton: {fileID: 5535186342280227574}
 --- !u!114 &5535186342051910641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d011f793361e84db92f70b78cd433a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggeredElement:
-  - {fileID: 0}
-  numberToTrigger: 10
   player: {fileID: 0}
+  numberToTrigger: 10
   typeMinion: 
+  enoughMinion: 0

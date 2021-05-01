@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using System.Linq;
-using Game.Minions;
-using UnityEngine.AI;
 
 namespace Game
 {
     public class Player : MonoBehaviour
     {
-        public NavMeshAgent targetAgent;
         public Transform playerTransform;
 
         public int fireMinionsFollowing = 0;
@@ -17,6 +12,7 @@ namespace Game
         public int waterMinionsFollowing = 0;
 
         public int currentId;
+
         private void Start()
         {
             currentId = GetInstanceID();
@@ -48,7 +44,7 @@ namespace Game
                     break;
             }
         }
-        
+
         public void MinusMinions(string typeMinion)
         {
             switch (typeMinion)

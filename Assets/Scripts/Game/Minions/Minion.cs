@@ -5,33 +5,46 @@ namespace Game.Minions
     public class Minion : MonoBehaviour
     {
         public Transform minion;
-        public Transform objectToFollow;
+        public Transform positionObjectToFollow = null;
         public int instanceIdObjectToFollow;
         public string typeMinion;
-        public Rigidbody rb;
-
-        public void ChangePosition(Transform newObjectToFollowPosition)
-        {
-            objectToFollow = newObjectToFollowPosition;
-        }
+        private float _speed = 10f;
+        private Vector3 _velocity = Vector3.zero;
         
-        private void FixedUpdate()
+        private Game _gameManagerScript;
+
+        private void Awake()
         {
-            if (objectToFollow != null)
+            _gameManagerScript = GameObject.Find("Scripts").GetComponent<Game>();
+        }
+        private void Update()
+        {
+            if (positionObjectToFollow != null)
             {
                 UpdatePosition();
-            }
+            } 
         }
-        
+
+        public void SetPositionObjectToFollow(int instanceNewObjectToFollow, Transform newObjectToFollow)
+        {
+            if (positionObjectToFollow != null && instanceIdObjectToFollow != instanceNewObjectToFollow)
+            {
+                if (positionObjectToFollow.gameObject.CompareTag($"flag"))
+                {
+                    _gameManagerScript.RemoveMinionFromFlag(positionObjectToFollow.gameObject.GetComponent<Flag.Flag>(), typeMinion);
+                }
+            }
+            positionObjectToFollow = newObjectToFollow;
+            instanceIdObjectToFollow = instanceNewObjectToFollow;
+        }
+
         private void UpdatePosition()
         {
-            if (Vector3.Distance(minion.position, objectToFollow.position) > 4f)
+            var distanceBetween = Vector3.Distance(minion.position, positionObjectToFollow.position);
+            if (distanceBetween > 4f)
             {
-                transform.position = Vector3.MoveTowards(minion.position, objectToFollow.position, 0.13f);
-            }
-            else
-            {
-                rb.velocity = Vector3.zero;
+                var positionObjectTofollow = positionObjectToFollow.position;
+                transform.position = Vector3.SmoothDamp(transform.position, positionObjectTofollow, ref _velocity , 1f, _speed);
             }
         }
     }

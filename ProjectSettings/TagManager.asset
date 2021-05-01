@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - minion
+  - flag
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Ground
   - Minion
   - rock
-  - 
-  - 
+  - ColliderArea
+  - flag
   - 
   - 
   - 

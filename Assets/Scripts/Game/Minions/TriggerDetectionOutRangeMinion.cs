@@ -12,7 +12,7 @@ namespace Game.Minions
             
             if (minion.gameObject.CompareTag($"minion") && minionScript.instanceIdObjectToFollow == playerScript.currentId)
             {
-                minionScript.objectToFollow = null;
+                minionScript.positionObjectToFollow = null;
                 minionScript.instanceIdObjectToFollow = 0;
                 playerScript.MinusMinions(minionScript.typeMinion);
                 gameScript.UpdateFieldsMaximumCanvas();
