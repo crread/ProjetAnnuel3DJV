@@ -19,11 +19,20 @@ namespace Game
         public InputField fireInput;
         public Text timerText;
         public float timerInSeconds = 180;
+        public float timerInSeconds;
         
         private bool _putFlag = false;
         private readonly List<Flag.Flag> _flagsList = new List<Flag.Flag>();
         private int _timerMinutesLeft;
         private int _timerSecondsLeft;
+        private string _sceneName;
+
+        private void Awake()
+        {
+            var scene = SceneManager.GetActiveScene();
+            _sceneName = scene.name;
+            Debug.Log(_sceneName);
+        }
 
         private void Update()
         {
@@ -74,12 +83,15 @@ namespace Game
         {
             _timerMinutesLeft = Mathf.CeilToInt(timerInSeconds / 60) - 1 < 0 ? 0 : Mathf.CeilToInt(timerInSeconds / 60) - 1;
             _timerSecondsLeft = Mathf.CeilToInt(timerInSeconds % 60);
+            _timerMinutesLeft = Mathf.FloorToInt(timerInSeconds / 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds / 60);
+            _timerSecondsLeft = Mathf.FloorToInt(timerInSeconds % 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds % 60);
             timerText.text = $"{_timerMinutesLeft:00}:{_timerSecondsLeft:00}";
         }
         public List<global::Game.Flag.Flag> GetFlagList()
         {
             return _flagsList;
         }
+        public List<global::Game.Flag.Flag> GetFlagList() => _flagsList;
         public void ValidationInput()
         {
             minionCanvasSelections.SetActive(false);

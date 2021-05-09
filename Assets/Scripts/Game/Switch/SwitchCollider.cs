@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
 namespace Game.Switch
 {
-    public class ColliderSwitchOut : MonoBehaviour
+    public class SwitchCollider : MonoBehaviour
     {
         public Switch switchButton;
 
@@ -12,6 +11,13 @@ namespace Game.Switch
             if (minion.gameObject.CompareTag($"minion"))
             {
                 switchButton.RemoveMinionInArea(minion.gameObject);
+            }
+        }
+        private void OnTriggerEnter(Collider minion)
+        {
+            if (minion.gameObject.CompareTag($"minion"))
+            {
+                switchButton.AddMinionInArea(minion.gameObject);
             }
         }
     }

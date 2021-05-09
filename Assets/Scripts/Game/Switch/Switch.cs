@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Map.Minions;
+﻿using Game.Minions;
 using UnityEngine;
 
 namespace Game.Switch
@@ -9,8 +10,10 @@ namespace Game.Switch
         public List<GameObject> triggeredElement;
         public int numberToTrigger;
         public GameObject player;
+        public int numberToTrigger;
         public string typeMinion;
         public bool enoughMinion = false;    
+        public bool enoughMinion;    
         
         private int _minionsOnArea;
         private GameObject _counterTextGameObject;
@@ -28,6 +31,8 @@ namespace Game.Switch
             var switchPosition = this.GetComponent<Transform>().position;
             _counterTextGameObject.transform.position = new Vector3(switchPosition.x, switchPosition.y + 5, switchPosition.z);
             _counterTextGameObject.transform.LookAt(player.transform.position);
+            
+            enoughMinion = false;
         }
 
         private void Update()
@@ -40,6 +45,10 @@ namespace Game.Switch
             _counterTextGameObject.transform.LookAt(player.transform.position);
         }
 
+        /// <summary>
+        ///   <para>Add minion in the switch area</para>
+        /// </summary>
+        /// <param name="minion"></param>
         public void AddMinionInArea(GameObject minion)
         {
             if (typeMinion == "" || minion.GetComponent<Minion>().typeMinion == typeMinion)
@@ -49,6 +58,10 @@ namespace Game.Switch
             }
         }
         
+        /// <summary>
+        ///   <para>Remove minion from the switch area</para>
+        /// </summary>
+        /// <param name="minion"></param>
         public void RemoveMinionInArea(GameObject minion)
         {
             if (typeMinion == "" || minion.GetComponent<Minion>().typeMinion == typeMinion)

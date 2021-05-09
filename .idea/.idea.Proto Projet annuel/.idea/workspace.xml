@@ -20,19 +20,34 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterMinion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/firstMap/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Ball.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Ball.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/EndZoneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/EndZoneScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/FlagEventCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Flag/FlagEventCollider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionInRangeMinion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionInRangeMinion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionOutRangeMinion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionOutRangeMinion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/Main.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/MouseHover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu/MouseHover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Map/Switch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchIn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchIn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchOut.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchOut.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/Switch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Switch/Switch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +63,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/07/dc2f6163/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/b1/068d6219/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../[Exemple] Carrefour_ Sans Object Pooling/Assets/Carrefour/Scripts/CustomUnityEvents/ClientSpawnedUnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/94/82881c9e/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/de/255bc297/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/0c/bdc46187/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/E5B75411-C8CD-4BFA-A9E7-60BE20206F29/5c/17af6d48/020001E6.il" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -99,7 +116,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Ball.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/ColliderSwitchIn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/Switch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/RockCollisionTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionInRangeMinion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Minions/TriggerDetectionOutRangeMinion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/EndZoneScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Switch/SwitchCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Flag/Flag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Minions/Minion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
       </list>
     </option>
@@ -185,6 +213,12 @@
       <workItem from="1613822747902" duration="9256000" />
       <workItem from="1613844104349" duration="1062000" />
       <workItem from="1613937708414" duration="2480000" />
+      <workItem from="1613942802098" duration="196000" />
+      <workItem from="1614012007484" duration="8349000" />
+      <workItem from="1614026553355" duration="3873000" />
+      <workItem from="1614036284877" duration="4574000" />
+      <workItem from="1614066951954" duration="804000" />
+      <workItem from="1614104135975" duration="1639000" />
     </task>
     <servers />
   </component>
@@ -238,9 +272,11 @@
     </state>
     <state x="639" y="237" width="642" height="566" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612714670335" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1612716167543">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1614029106903">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612716167543" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1614029106903" />
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609028003888" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609206639397">
       <screen x="0" y="0" width="1920" height="1040" />
