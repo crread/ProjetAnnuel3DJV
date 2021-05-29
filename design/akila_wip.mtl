@@ -1,0 +1,230 @@
+# Blender MTL File: 'None'
+# Material Count: 20
+
+newmtl Brass_-_Pure
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Pure\\GWC Brass Pure_Normal.png
+map_Kd F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Pure\\GWC Brass Pure_BaseColor.png
+map_d F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Pure\\GWC Brass Pure_BaseColor.png
+refl F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Pure\\GWC Brass Pure_Metalness.png
+
+newmtl Brass_Scratched
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.300000 F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Scratched\\GWC Brass Scratched_Normal.png
+map_Kd F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Scratched\\GWC Brass Scratched_BaseColor.png
+map_d F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Scratched\\GWC Brass Scratched_BaseColor.png
+refl F:\\Dropbox\\Blender\\Assets\\All Items\\Material Libraries\\Alchemist\\GWC Brass Scratched\\GWC Brass Scratched_Metalness.png
+
+newmtl Brown_Fur
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Alphas, Textures etc\\Texturen\\eigene\\Animal\\Fur\\10\\Fur10 normal 4k.png
+map_Kd D:\\Alphas, Textures etc\\Texturen\\eigene\\Animal\\Fur\\10\\Fur10 diffuse 4k.png
+map_Ns D:\\Alphas, Textures etc\\Texturen\\eigene\\Animal\\Fur\\10\\Fur10 roughness 4k.png
+
+newmtl Brushed__Dark_Metal
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.033140 0.033140 0.033140
+Ks 0.672727 0.672727 0.672727
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Brushed_metal
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.015000 C:\\Desktop\\ice blue brushed metal normal map.png
+map_Kd C:\\Desktop\\ice blue brushed metal diifuse map.png
+map_Ns C:\\Desktop\\ice blue brushed metal roughness map.png
+
+newmtl Burnt_Metal
+Ns 685.487607
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Burnt_Metal.001
+Ns 685.487607
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Canvas_fabric_texture
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.100000 D:\\JOB\\PROJECT\\Material\\Canvas fabric texture\\Normal.png
+map_Kd D:\\JOB\\PROJECT\\Material\\Canvas fabric texture\\Diffuse.png
+map_Ns D:\\JOB\\PROJECT\\Material\\Canvas fabric texture\\Roughness.png
+
+newmtl Carlight_triangle_chrome_white
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd B:\\veci na prodej TS\\auta\\materialy\\Carlight_triangle_chrome_white\\Carlight_triangle_chrome_white_Base Color.png
+map_Ks B:\\veci na prodej TS\\auta\\materialy\\Carlight_triangle_chrome_white\\Carlight_triangle_chrome_white_Specular.png
+map_Ns B:\\veci na prodej TS\\auta\\materialy\\Carlight_triangle_chrome_white\\Carlight_triangle_chrome_white_Roughness.png
+refl B:\\veci na prodej TS\\auta\\materialy\\Carlight_triangle_chrome_white\\Carlight_triangle_chrome_white_Metallic.png
+
+newmtl Metal07_PBR
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Metal08_PBR
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Metal_02
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Metal_04
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.513636 0.513636 0.513636
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Metal_scratched
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Metal_scratched.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal038_2K-JPG\\Metal038_2K_Color.jpg
+map_Ns D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal038_2K-JPG\\Metal038_2K_Roughness.jpg
+refl D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal038_2K-JPG\\Metal038_2K_Metalness.jpg
+
+newmtl Metal_scratched.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal039_2K-JPG\\Metal039_2K_Color.jpg
+map_Ns D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal039_2K-JPG\\Metal039_2K_Roughness.jpg
+refl D:\\WORK\\BlenderFiles\\Materials\\NEW\\Metal039_2K-JPG\\Metal039_2K_Metalness.jpg
+
+newmtl PBR_Polished_Brass
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Sandblasted_silver_metal
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+
+newmtl White_Cotton
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl lambert1.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd .
