@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Game.Minions;
 using UnityEngine.AI;
+using Script.Modules;
+
 
 namespace Game
 {
@@ -17,13 +19,15 @@ namespace Game
         public Text airMinionsTargeted;
         public Text earthMinionsTargeted;
         public Text waterMinionsTargeted;
-        
+
         public Animator characterAnimator;
-        private bool _isRunning;
         private readonly Dictionary<string, List<GameObject>> _minionsListType = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> _minionsListTypeFollowing = new Dictionary<string, List<GameObject>>();
         private readonly Dictionary<string, List<GameObject>> _minionsListBufferForFlag = new Dictionary<string, List<GameObject>>();
-        private bool _disableMove = false;
+        public bool _disableMove = false;
+        public Game game;
+        private Vector3 _lastHit;
+        
         private void Start()
         {
             _minionsListType.Add("air", new List<GameObject>());
@@ -36,28 +40,42 @@ namespace Game
             _minionsListTypeFollowing.Add("water", new List<GameObject>());
             _minionsListTypeFollowing.Add("earth", new List<GameObject>());
             
-            _isRunning = false;
+            
         }
 
         private void Update()
         {
-            if (Input.GetMouseButton(0) && !_disableMove)
-            {
-                var ray = raycastCamera.ScreenPointToRay(Input.mousePosition);
-                foreach (var ground in groundCollider)
+            
+            
+                if (Input.GetMouseButton(0) && !_disableMove )
                 {
-                    if (ground.Raycast(ray, out var hit, float.MaxValue))
+                    var ray = raycastCamera.ScreenPointToRay(Input.mousePosition);
+                    foreach (var ground in groundCollider)
                     {
-                        targetAgent.SetDestination(hit.point);
-                        characterAnimator.SetBool("isRunning", true);
-                        break;
+                        if (ground.Raycast(ray, out var hit, float.MaxValue))
+                        {
+                            targetAgent.SetDestination(hit.point);
+                            _lastHit = hit.point;
+                            characterAnimator.SetBool("isRunning", true);
+                            characterAnimator.SetBool("isPointing", false);
+                            break;
+                        }
                     }
+            
+            
                 }
+            
+
+            if (Vector3.Distance(_lastHit, playerTransform.position)<=1.1)
+            {
+                characterAnimator.SetBool("isRunning", false);
             }
+
             if (Input.GetKeyDown(KeyCode.Space))
             { 
                 MakeMinionsFollow();
             }
+            
         }
 
         public void UpdateMoveOption(bool option)
@@ -73,9 +91,14 @@ namespace Game
                 {
                     if (!_minionsListTypeFollowing[minionList.Key].Contains(minion))
                     {
-                        Minion minionScript = minion.GetComponent<Minion>();
-                        minionScript.objectToFollow = playerTransform;
-                        _minionsListTypeFollowing[minionList.Key].Add(minion);   
+                          
+                        
+                            MinionModule minionScript = minion.GetComponent<MinionModule>();
+                            minionScript.ObjectToFollow = playerTransform;
+                            minionScript.Follow = true;
+                            _minionsListTypeFollowing[minionList.Key].Add(minion);
+                        
+                        
                     }
                 }
             }
@@ -96,11 +119,12 @@ namespace Game
 
         public void RemoveMinionInArea(GameObject minion)
         {
-            var minionsType = minion.GetComponent<Minion>().typeMinion;
-        
+            
+            var minionsType = minion.GetComponent<MinionModule>().TypeMinion;
+
             if (_minionsListType[minionsType].Contains(minion))
             {
-                if (minion.GetComponent<Minion>().follow)
+                if (minion.GetComponent<MinionModule>().Follow)
                 {
                     _minionsListTypeFollowing[minionsType].Remove(minion);
                 }
@@ -110,7 +134,7 @@ namespace Game
     
         public void AddMinionInArea(GameObject minion)
         {
-            var minionsType = minion.GetComponent<Minion>().typeMinion;
+            var minionsType = minion.GetComponent<MinionModule>().TypeMinion;
         
             if (!_minionsListType[minionsType].Contains(minion))
             {
@@ -140,7 +164,7 @@ namespace Game
                 {
                     if (_minionsListBufferForFlag[minionList.Key].Contains(minion))
                     {
-                        minion.GetComponent<Minion>().objectToFollow = flag.transform;
+                        minion.GetComponent<MinionModule>().ObjectToFollow = flag.transform;
                         _minionsListTypeFollowing[minionList.Key].Remove(minion);
                         _minionsListBufferForFlag[minionList.Key].Remove(minion);
                     }
@@ -155,5 +179,9 @@ namespace Game
             _minionsListBufferForFlag.Add("water", new List<GameObject>());
             _minionsListBufferForFlag.Add("earth", new List<GameObject>());
         }
+
+        
+
+       
     }
 }

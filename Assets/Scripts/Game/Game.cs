@@ -25,6 +25,7 @@ namespace Game
         private int _timerMinutesLeft;
         private int _timerSecondsLeft;
         private string _sceneName;
+        public GameObject character;
 
         private void Awake()
         {
@@ -70,8 +71,9 @@ namespace Game
                         newFlag.GetComponent<global::Game.Flag.Flag>().SetMinionsOnFlag(player.GetMinionsListBufferForFlag());
                         player.ClearMinionForFlagBuffer(newFlag);
                         _flagsList.Add(newFlag.GetComponent<global::Game.Flag.Flag>());
-                        player.UpdateMoveOption(false);
+                        player.UpdateMoveOption(true);
                         _putFlag = false;
+                        character.GetComponent<Animator>().SetBool("isPointing",true);
                         break;
                     }
                 }
@@ -99,6 +101,27 @@ namespace Game
             player.LoadMinionBuffer(minionsSelected);
             minionsSelected.Clear();
             _putFlag = true;
+            
+            
+            
+
         }
+
+        public bool PuttingFlag()
+        {
+            if (_putFlag)
+            {
+                
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
     }
+    
+    
 }

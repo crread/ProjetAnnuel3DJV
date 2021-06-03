@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Game.Minions;
 using UnityEngine;
+using Script.Modules;
 
 namespace Game.Flag
 {
@@ -43,10 +44,12 @@ namespace Game.Flag
 
         public void RemoveMinion(GameObject minion)
         {
-            var typeMinion = minion.GetComponent<Minion>().typeMinion;
+            //var typeMinion = minion.GetComponent<Minion>().typeMinion;
+            var typeMinion = minion.GetComponent<MinionModule>().TypeMinion;
             if (_minionsOnFlag.ContainsKey(typeMinion) && _minionsOnFlag[typeMinion].Contains(minion))
             {
-                _minionsOnFlag[minion.GetComponent<Minion>().typeMinion].Remove(minion);
+                //_minionsOnFlag[minion.GetComponent<Minion>().typeMinion].Remove(minion);
+                _minionsOnFlag[minion.GetComponent<MinionModule>().TypeMinion].Remove(minion);
                 _minionsCounter -= 1;
             }
         }
