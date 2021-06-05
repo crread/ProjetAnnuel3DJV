@@ -18,9 +18,11 @@ namespace Game
         private Flag.Flag _selectedFlag;
         private MinionSelectorField _currentMinionFieldSelected;
         private string _typeSelected = "";
+        private DDOL _ddol;
 
         private void Start()
         {
+            _ddol = GameObject.Find("Preload").GetComponent<DDOL>();
             UpdateFieldsMaximumCanvas();
         }
 
@@ -34,7 +36,7 @@ namespace Game
             else
             {
                 timerInSeconds = 0;
-                SceneManager.LoadScene("LoseMenu");
+                EndGame(false);
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -191,7 +193,8 @@ namespace Game
                     canvasManager.waterFieldFlag.gameObject.SetActive(true);
                     
                     UpdateFieldsMaximumCanvas();
-                } else if (hit.transform.gameObject.layer == 9)
+                } 
+                else if (hit.transform.gameObject.layer == 9)
                 {
                     player.GetComponent<NavMeshAgent>().destination = hit.point;
                 }
@@ -603,6 +606,14 @@ namespace Game
             {
                 Destroy(flagScript.gameObject);
             }
+        }
+        
+        public void EndGame(bool isVictory)
+        {
+            _ddol.gameData.isVictory = isVictory;
+            _ddol.gameData.timer = timerInSeconds;
+            _ddol.SetLastSceneNamePlayed(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("EndGameMenu");
         }
     }
 }

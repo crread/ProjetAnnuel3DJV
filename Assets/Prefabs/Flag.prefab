@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 4628453378325537092}
   - component: {fileID: 262787942122740279}
   - component: {fileID: 5755830513998903626}
+  - component: {fileID: 8775309252076399}
   m_Layer: 13
   m_Name: Flag
   m_TagString: flag
@@ -216,3 +217,25 @@ CapsuleCollider:
   m_Height: 3.003933
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &8775309252076399
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677809111174005538}
+  m_Enabled: 1
+  m_AgentTypeID: 287145453
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 0
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 2
+  m_ObstacleAvoidanceType: 4

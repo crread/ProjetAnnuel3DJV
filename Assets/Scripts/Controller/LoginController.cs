@@ -14,41 +14,45 @@ namespace Controller
         public GameObject mainMenuCanvas;
         public GameObject loginCanvas;
         public GameObject errorMessage;
-        
+
+        private GameObject _preload;
         private Color _initColor;
         
-        public void Start()
+        private void Start()
         {
             _initColor = text.color;
             errorMessage.SetActive(false);
+            _preload = GameObject.Find("Preload");
+        }
+
+        private void Update()
+        {
+            if (_preload.GetComponent<DDOL>().networkManager.requestTreated)
+            {
+                if (_preload.GetComponent<DDOL>().player.token != null)
+                {
+                    loginCanvas.SetActive(false);
+                    mainMenuCanvas.SetActive(true);             
+                }
+                else
+                {
+                    errorMessage.SetActive(true);
+                    errorMessage.GetComponent<Text>().text = _preload.GetComponent<DDOL>().responseRequest.detail;
+                }
+
+                _preload.GetComponent<DDOL>().networkManager.requestTreated = false;
+            }
         }
 
         /// <summary>
         ///   <para>Catch data from email and password field and start a request to the API.</para>
         /// </summary>
-        
         public void OnPointerClick(PointerEventData eventData)
         {
-            GameObject preload = GameObject.Find("Preload");
-            
-            if (preload.GetComponent<DDOL>().networkManager.isNetworkAvailable)
+            if (_preload.GetComponent<DDOL>().networkManager.isNetworkAvailable)
             {
                 LoginEntity loginData = new LoginEntity(email.text, password.text);
-
-                preload.GetComponent<DDOL>().networkManager.GetUser(JsonConvert.SerializeObject(loginData));
-            
-                if (preload.GetComponent<DDOL>().player != null)
-                {
-                    loginCanvas.SetActive(false);
-                    mainMenuCanvas.SetActive(true);
-                }
-                else
-                {
-                    if (preload.GetComponent<DDOL>().responseRequest.httpCode == 401)
-                    {
-                        errorMessage.SetActive(true);
-                    }
-                }
+                _preload.GetComponent<DDOL>().networkManager.GetUser(JsonConvert.SerializeObject(loginData));
             }
         }
 

@@ -8,7 +8,7 @@ namespace Scenes.MainMenu
     public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public Text text;
-        public enum ListOfInteraction {Campaign, CustomGame, Editor, Options, Quit, Return};
+        public enum ListOfInteraction {Campaign, CustomGame, Editor, Login, Create, Options, Quit, Return};
         public ListOfInteraction buttonType;
         public GameObject canvasToOpen;
 
@@ -37,23 +37,13 @@ namespace Scenes.MainMenu
             ResetColor();
             switch (buttonType)
             {
-                case ListOfInteraction.Campaign :
-                    canvasToOpen.SetActive(true);
-                    GetComponentInParent<Canvas>().gameObject.SetActive(false);
-                    break;
-                case ListOfInteraction.CustomGame :
-                    canvasToOpen.SetActive(true);
-                    GetComponentInParent<Canvas>().gameObject.SetActive(false);
-                    break;
-                case ListOfInteraction.Editor :
-                    canvasToOpen.SetActive(true);
-                    GetComponentInParent<Canvas>().gameObject.SetActive(false);
-                    break;
-                case ListOfInteraction.Options :
-                    canvasToOpen.SetActive(true);
-                    GetComponentInParent<Canvas>().gameObject.SetActive(false);
-                    break;
-                case ListOfInteraction.Return :
+                case ListOfInteraction.Campaign:
+                case ListOfInteraction.CustomGame:
+                case ListOfInteraction.Editor:
+                case ListOfInteraction.Login:
+                case ListOfInteraction.Create:
+                case ListOfInteraction.Options:
+                case ListOfInteraction.Return:
                     canvasToOpen.SetActive(true);
                     GetComponentInParent<Canvas>().gameObject.SetActive(false);
                     break;
