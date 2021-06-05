@@ -19,15 +19,14 @@ namespace Scenes.MainMenu
             _currentNetworkState = _ddol.networkManager.isNetworkAvailable;
             ChangeNetworkMessageStatus();
             
-            if (!_currentNetworkState || _ddol.isLoaded)
-            { 
-                loginCanvas.SetActive(false);
-                mainMenuCanvas.SetActive(true);
-            }
-            
             if (_currentNetworkState)
             {
+                loginCanvas.SetActive(true);
                 _ddol.isLoaded = true;
+            }
+            else
+            { 
+                mainMenuCanvas.SetActive(true);
             }
         }
         

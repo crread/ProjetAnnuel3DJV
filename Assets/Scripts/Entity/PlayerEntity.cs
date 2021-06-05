@@ -2,9 +2,13 @@
 {
     public class PlayerEntity
     {
-        public string token;
-        public string name;
+        public readonly string token;
+        // public readonly string name;
 
-        public PlayerEntity() {}
+        public PlayerEntity(string token)
+        {
+            // this.name = name;
+            this.token = token;
+        }
     }
 }

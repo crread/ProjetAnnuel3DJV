@@ -4,25 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class DDOL : MonoBehaviour
 {
-    public struct GameData
-    {
-        public bool isVictory;
-        public float timer;
-    }
-
     public NetworkManager networkManager;
     public bool isLoaded = false;
-    public ResponseRequestEntity responseRequest;
     public PlayerEntity player;
-    public GameData gameData = new GameData();
-
-    private string _lastSceneNamePlayed;
-    
+    public ResponseRequestEntity responseRequest;
     private void Awake()
     {
-        player = new PlayerEntity();
-        responseRequest = new ResponseRequestEntity();
-
         DontDestroyOnLoad(this);
 
         if (networkManager == null)
@@ -37,15 +24,5 @@ public class DDOL : MonoBehaviour
         {
             SceneManager.LoadScene("mainMenu");
         }
-    }
-
-    public string GetLastSceneNamePlayed()
-    {
-        return _lastSceneNamePlayed;
-    }
-    
-    public void SetLastSceneNamePlayed(string lastSceneNamePlayed)
-    {
-        _lastSceneNamePlayed = lastSceneNamePlayed;
     }
 }

@@ -23,7 +23,10 @@ namespace Game
         public MinionSelectorField earthFieldFlag;
         public MinionSelectorField fireFieldFlag;
         public MinionSelectorField waterFieldFlag;
-
+        
+        private int _timerMinutesLeft;
+        private int _timerSecondsLeft;
+        
         private void Start()
         {
             SetBackgroundFieldsToFalse();
@@ -63,9 +66,9 @@ namespace Game
         
         public void DisplayTimer(float timerInSeconds)
         {
-            var timerMinutesLeft = Mathf.FloorToInt(timerInSeconds / 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds / 60);
-            var timerSecondsLeft = Mathf.FloorToInt(timerInSeconds % 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds % 60);
-            timer.text = $"{timerMinutesLeft:00}:{timerSecondsLeft:00}";
+            _timerMinutesLeft = Mathf.FloorToInt(timerInSeconds / 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds / 60);
+            _timerSecondsLeft = Mathf.FloorToInt(timerInSeconds % 60) < 0 ? 0 : Mathf.FloorToInt(timerInSeconds % 60);
+            timer.text = $"{_timerMinutesLeft:00}:{_timerSecondsLeft:00}";
         }
 
         public void SetBackgroundFieldsToFalse()

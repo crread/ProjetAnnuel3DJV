@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
     public class EndZoneScript : MonoBehaviour
     {
-        private Game _gameManager;
-        private void Start()
+        private BoxCollider _endZoneCollision;
+        void Start()
         {
-            _gameManager = GameObject.Find("Scripts").GetComponent<Game>();
+            _endZoneCollision = GetComponent<BoxCollider>();
         }
 
         private void OnTriggerEnter(Collider player)
         {
             if (player.gameObject.CompareTag("Player"))
             {
-                _gameManager.EndGame(true);
+                SceneManager.LoadScene("WinMenu");
             }
         }
     }

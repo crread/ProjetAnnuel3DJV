@@ -3,9 +3,7 @@
     public class ResponseRequestEntity
     {
         public long httpCode;
-        public string detail;
-
-        public ResponseRequestEntity() {}
+        public readonly string detail;
 
         public ResponseRequestEntity(string detail)
         {
