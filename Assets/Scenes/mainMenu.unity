@@ -2315,9 +2315,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 739899385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abe2be16895e7004882747f75722ee4a, type: 3}
+  m_Script: {fileID: 11500000, guid: b2d754a15b7a4f84d8637e092bbc3ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1585693672}
+  sceneName: editeurMap
 --- !u!1001 &763633665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4914,7 +4916,12 @@ PrefabInstance:
     - target: {fileID: 4616455617252406278, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
       propertyPath: m_Name
-      value: MenuButton
+      value: EditorButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616455617252406278, guid: 42a8893c3444f594e9f177788bdfe0c1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4616455617252406280, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
@@ -5029,6 +5036,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42a8893c3444f594e9f177788bdfe0c1, type: 3}
+--- !u!114 &1585693672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4616455617252406280, guid: 42a8893c3444f594e9f177788bdfe0c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1585693671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739899385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1596258918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,6 +6415,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4616455617252406278, guid: 42a8893c3444f594e9f177788bdfe0c1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4616455617252406280, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
       propertyPath: m_Text
@@ -6546,6 +6570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2061259538}
+  sceneName: firstMap
 --- !u!1 &2076405974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6938,7 +6963,7 @@ PrefabInstance:
     - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
       propertyPath: buttonType
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3016419831339415277, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
