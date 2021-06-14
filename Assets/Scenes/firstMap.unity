@@ -1852,42 +1852,42 @@ Transform:
   - {fileID: 1907982149}
   - {fileID: 1753306049}
   - {fileID: 2101249715}
-  - {fileID: 161426423}
   - {fileID: 1763589377}
-  - {fileID: 1949787453}
   - {fileID: 760336157}
   - {fileID: 977281254}
   - {fileID: 120283019}
   - {fileID: 325392093}
   - {fileID: 1141135025}
-  - {fileID: 1152011189}
+  - {fileID: 1075453284}
   - {fileID: 1425701912}
-  - {fileID: 1531353051}
+  - {fileID: 701521347}
   - {fileID: 1049713295}
   - {fileID: 1859605368}
   - {fileID: 318493176}
   - {fileID: 309015384}
-  - {fileID: 1828744046}
-  - {fileID: 1731608929}
-  - {fileID: 1941217002}
-  - {fileID: 843832019}
-  - {fileID: 1056383967}
-  - {fileID: 752480646}
-  - {fileID: 701521347}
-  - {fileID: 2016847032}
-  - {fileID: 2115483467}
-  - {fileID: 1075453284}
-  - {fileID: 1962798160}
-  - {fileID: 2041767129}
-  - {fileID: 1231580109}
-  - {fileID: 1452878125}
-  - {fileID: 2000569822}
-  - {fileID: 725939563}
-  - {fileID: 60125539}
-  - {fileID: 1791580401}
-  - {fileID: 340625457}
   - {fileID: 341695226}
+  - {fileID: 1731608929}
+  - {fileID: 60125539}
+  - {fileID: 1941217002}
+  - {fileID: 1531353051}
+  - {fileID: 1056383967}
+  - {fileID: 843832019}
+  - {fileID: 752480646}
+  - {fileID: 1152011189}
+  - {fileID: 2016847032}
+  - {fileID: 340625457}
+  - {fileID: 2115483467}
+  - {fileID: 1962798160}
+  - {fileID: 1828744046}
+  - {fileID: 2041767129}
+  - {fileID: 1791580401}
+  - {fileID: 1452878125}
+  - {fileID: 725939563}
+  - {fileID: 161426423}
+  - {fileID: 1949787453}
+  - {fileID: 1231580109}
   - {fileID: 1829934797}
+  - {fileID: 2000569822}
   - {fileID: 1029449356}
   - {fileID: 1217215030}
   m_Father: {fileID: 0}
@@ -7247,6 +7247,7 @@ GameObject:
   - component: {fileID: 1488944433}
   - component: {fileID: 1488944432}
   - component: {fileID: 1488944437}
+  - component: {fileID: 1488944435}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -7329,6 +7330,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1488944435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488944431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd63c5db014286146a78d6f16cd798ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  nav: {fileID: 1488944432}
 --- !u!4 &1488944436
 Transform:
   m_ObjectHideFlags: 0

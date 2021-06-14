@@ -9,6 +9,7 @@ namespace Script.ECS
         private void Update()
         {
             MovementUpdaterPlayer.Instance().SystemUpdate();
+            SpeedUpdaterPlayer.Instance().SystemUpdate();
         }
     }
         

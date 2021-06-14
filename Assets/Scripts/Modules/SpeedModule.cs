@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace Script.Modules
@@ -7,6 +8,7 @@ namespace Script.Modules
     public class SpeedModule : TModule
     {
         [SerializeField] private float speed;
+        [SerializeField] private NavMeshAgent  nav ;
 
         private void Awake()
         {
@@ -17,6 +19,11 @@ namespace Script.Modules
         {
             get => speed;
             set => speed = value;
+        }
+        public NavMeshAgent Nav
+        {
+            get => nav;
+            set => nav = value;
         }
     }
 }
