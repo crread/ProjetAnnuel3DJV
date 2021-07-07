@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
     public class Obstacle : MonoBehaviour
     {
+        public GameObject mainCamera;
+        
         public List<Switch.Switch> switchs = new List<Switch.Switch>();
         public List<TriggerAreaCollision> boxTriggers = new List<TriggerAreaCollision>();
         public enum ListOfInteraction {PlayAnimation, ActiveGravity};
         public ListOfInteraction typeInteraction;
+        public bool isActionCameraOn;
+        public GameObject camera;
         
         private bool _triggeredSwitch = true;
         private bool _triggeredTrigger = true;
+        private bool _cutsceneTriggered = false;
         private bool _isTriggered;
         private Animator _selfAnimation;
         private Rigidbody _selfRigidbody;
-        
+
         private void Start()
         {
             switch (typeInteraction)
@@ -71,7 +77,21 @@ namespace Game
         {
             if (_selfAnimation)
             {
-                _selfAnimation.SetTrigger(_isTriggered ? "OpenDoor" : "CloseDoor");   
+                if (_isTriggered)
+                {
+                    if (_selfAnimation.GetCurrentAnimatorStateInfo(0).IsName("DoorOpened") && isActionCameraOn)
+                    {
+                        ActionStopCutScene();
+                    }
+                    
+                    if (isActionCameraOn && !_cutsceneTriggered)
+                        ActionActiveCutScene();
+                    _selfAnimation.SetTrigger("OpenDoor");
+                }
+                else
+                {
+                    _selfAnimation.SetTrigger("CloseDoor");
+                }
             }
         }
         
@@ -81,6 +101,20 @@ namespace Game
             {
                 _selfRigidbody.useGravity = true;
             }
+        }
+
+        private void ActionActiveCutScene()
+        {
+            camera.SetActive(true);
+            mainCamera.SetActive(false);
+        }
+
+        private void ActionStopCutScene()
+        {
+            _cutsceneTriggered = true;
+            mainCamera.SetActive(true);
+            camera.SetActive(false);
+            
         }
     }
 }

@@ -62,7 +62,7 @@ public class NetworkManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("YES BITCH");
+                // Debug.Log("YES BITCH");  
                 // GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
             }
 

@@ -13,6 +13,7 @@ namespace Game
         public GameObject prefabFlag;
         public Camera raycastCamera;
         public CanvasManager canvasManager;
+        public GameObject menuCanvas;
         public float timerInSeconds;
 
         private Flag.Flag _selectedFlag;
@@ -28,6 +29,13 @@ namespace Game
 
         private void Update()
         {
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                menuCanvas.SetActive(!menuCanvas.activeInHierarchy);
+                Time.timeScale = menuCanvas.activeInHierarchy ? 0 : 1;
+            }
+            
             if (timerInSeconds > 0)
             {
                 timerInSeconds -= Time.deltaTime;
@@ -120,7 +128,8 @@ namespace Game
                 if (_currentMinionFieldSelected)
                 {
                     var currentMaximumMinionsFollowing = GetMaximumFollowingMinionsByType();
-                    _currentMinionFieldSelected.selectedMinionsField.text = currentMaximumMinionsFollowing.ToString();
+                    _currentMinionFieldSelected.selectedMinionsField.text =
+                        currentMaximumMinionsFollowing.ToString();
                 }
             }
 
@@ -129,7 +138,8 @@ namespace Game
                 if (_currentMinionFieldSelected)
                 {
                     var currentMaximumMinionsFollowing = GetMaximumFollowingMinionsByType() / 2;
-                    _currentMinionFieldSelected.selectedMinionsField.text = currentMaximumMinionsFollowing.ToString();
+                    _currentMinionFieldSelected.selectedMinionsField.text =
+                        currentMaximumMinionsFollowing.ToString();
                 }
             }
 
@@ -186,14 +196,14 @@ namespace Game
                 {
                     _selectedFlag = hit.transform.gameObject.GetComponent<Flag.Flag>();
                     UpdateFieldsFlagMaximumCanvas(_selectedFlag);
-                    
+
                     canvasManager.airFieldFlag.gameObject.SetActive(true);
                     canvasManager.earthFieldFlag.gameObject.SetActive(true);
                     canvasManager.fireFieldFlag.gameObject.SetActive(true);
                     canvasManager.waterFieldFlag.gameObject.SetActive(true);
-                    
+
                     UpdateFieldsMaximumCanvas();
-                } 
+                }
                 else if (hit.transform.gameObject.layer == 9)
                 {
                     player.GetComponent<NavMeshAgent>().destination = hit.point;
@@ -224,7 +234,7 @@ namespace Game
                         {
                             position = hit.point;
                         }
-                        
+
                         if (position != Vector3.negativeInfinity)
                         {
                             Collider[] listCollider = Physics.OverlapSphere(player.playerTransform.position, 40,
@@ -317,73 +327,74 @@ namespace Game
                     if (totalMinionsSelected > 0)
                     {
                         Collider[] listCollider = Physics.OverlapSphere(player.playerTransform.position, 40,
-                                LayerMask.GetMask("Minion"));
+                            LayerMask.GetMask("Minion"));
                         Flag.Flag flagScript = _selectedFlag.GetComponent<Flag.Flag>();
 
-                            var minions = listCollider
-                                .Where(minion =>
-                                    minion.GetComponent<Minion>().instanceIdObjectToFollow == player.currentId)
-                                .ToArray();
+                        var minions = listCollider
+                            .Where(minion =>
+                                minion.GetComponent<Minion>().instanceIdObjectToFollow == player.currentId)
+                            .ToArray();
 
-                            player.earthMinionsFollowing -= earthMinionsSelected;
-                            player.fireMinionsFollowing -= fireMinionsSelected;
-                            player.airMinionsFollowing -= airMinionsSelected;
-                            player.waterMinionsFollowing -= waterMinionsSelected;
+                        player.earthMinionsFollowing -= earthMinionsSelected;
+                        player.fireMinionsFollowing -= fireMinionsSelected;
+                        player.airMinionsFollowing -= airMinionsSelected;
+                        player.waterMinionsFollowing -= waterMinionsSelected;
 
-                            foreach (var minion in minions)
+                        foreach (var minion in minions)
+                        {
+                            var minionScript = minion.GetComponent<Minion>();
+                            switch (minionScript.typeMinion)
                             {
-                                var minionScript = minion.GetComponent<Minion>();
-                                switch (minionScript.typeMinion)
-                                {
-                                    case "fire":
-                                        if (fireMinionsSelected > 0)
-                                        {
-                                            fireMinionsSelected -= 1;
-                                            minionScript.SetPositionObjectToFollow(flagScript.currentId,
-                                                _selectedFlag.transform);
-                                            flagScript.fireMinionsFollowing += 1;
-                                            totalMinionsSelected -= 1;
-                                        }
+                                case "fire":
+                                    if (fireMinionsSelected > 0)
+                                    {
+                                        fireMinionsSelected -= 1;
+                                        minionScript.SetPositionObjectToFollow(flagScript.currentId,
+                                            _selectedFlag.transform);
+                                        flagScript.fireMinionsFollowing += 1;
+                                        totalMinionsSelected -= 1;
+                                    }
 
-                                        break;
-                                    case "air":
-                                        if (airMinionsSelected > 0)
-                                        {
-                                            airMinionsSelected -= 1;
-                                            minionScript.SetPositionObjectToFollow(flagScript.currentId,
-                                                _selectedFlag.transform);
-                                            flagScript.airMinionsFollowing += 1;
-                                            totalMinionsSelected -= 1;
-                                        }
+                                    break;
+                                case "air":
+                                    if (airMinionsSelected > 0)
+                                    {
+                                        airMinionsSelected -= 1;
+                                        minionScript.SetPositionObjectToFollow(flagScript.currentId,
+                                            _selectedFlag.transform);
+                                        flagScript.airMinionsFollowing += 1;
+                                        totalMinionsSelected -= 1;
+                                    }
 
-                                        break;
-                                    case "earth":
-                                        if (earthMinionsSelected > 0)
-                                        {
-                                            earthMinionsSelected -= 1;
-                                            minionScript.SetPositionObjectToFollow(flagScript.currentId,
-                                                _selectedFlag.transform);
-                                            flagScript.earthMinionsFollowing += 1;
-                                            totalMinionsSelected -= 1;
-                                        }
+                                    break;
+                                case "earth":
+                                    if (earthMinionsSelected > 0)
+                                    {
+                                        earthMinionsSelected -= 1;
+                                        minionScript.SetPositionObjectToFollow(flagScript.currentId,
+                                            _selectedFlag.transform);
+                                        flagScript.earthMinionsFollowing += 1;
+                                        totalMinionsSelected -= 1;
+                                    }
 
-                                        break;
-                                    case "water":
-                                        if (waterMinionsSelected > 0)
-                                        {
-                                            waterMinionsSelected -= 1;
-                                            minionScript.SetPositionObjectToFollow(flagScript.currentId,
-                                                _selectedFlag.transform);
-                                            flagScript.waterMinionsFollowing += 1;
-                                            totalMinionsSelected -= 1;
-                                        }
+                                    break;
+                                case "water":
+                                    if (waterMinionsSelected > 0)
+                                    {
+                                        waterMinionsSelected -= 1;
+                                        minionScript.SetPositionObjectToFollow(flagScript.currentId,
+                                            _selectedFlag.transform);
+                                        flagScript.waterMinionsFollowing += 1;
+                                        totalMinionsSelected -= 1;
+                                    }
 
-                                        break;
-                                }
+                                    break;
                             }
+                        }
                     }
-                    
-                    var airMinionsSelectedFromFlag = Int32.Parse(canvasManager.airFieldFlag.selectedMinionsField.text);
+
+                    var airMinionsSelectedFromFlag =
+                        Int32.Parse(canvasManager.airFieldFlag.selectedMinionsField.text);
                     var waterMinionsSelectedFromFlag =
                         Int32.Parse(canvasManager.waterFieldFlag.selectedMinionsField.text);
                     var fireMinionsSelectedFromFlag =
@@ -392,7 +403,7 @@ namespace Game
                         Int32.Parse(canvasManager.earthFieldFlag.selectedMinionsField.text);
                     var totalMinionsSelectedFromFlag = airMinionsSelectedFromFlag + waterMinionsSelectedFromFlag +
                                                        fireMinionsSelectedFromFlag + earthMinionsSelectedFromFlag;
-                    
+
                     if (totalMinionsSelectedFromFlag > 0)
                     {
                         Collider[] listCollider = Physics.OverlapSphere(_selectedFlag.transform.position, 40,
@@ -473,6 +484,7 @@ namespace Game
             }
 
             MakeMinionsFollowPlayer();
+
         }
 
         /// <summary>

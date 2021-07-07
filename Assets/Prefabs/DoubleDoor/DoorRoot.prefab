@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6398342849754384948}
   - component: {fileID: 7819950229856211299}
   - component: {fileID: 6855239113674329080}
+  - component: {fileID: -3136267134681616078}
   m_Layer: 0
   m_Name: DoorRoot
   m_TagString: Untagged
@@ -65,10 +66,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3818559466cf204bb3fce1fb8933402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 4203099379107677937, guid: ccb5bc299ef08ce42845df9399804414,
+    type: 3}
   switchs:
   - {fileID: 0}
   boxTriggers: []
   typeInteraction: 0
+  isActionCameraOn: 0
+  camera: {fileID: 0}
+--- !u!114 &-3136267134681616078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398342849754384947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23429c7153c8a34ca05300af304cada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6398342851466926869
 PrefabInstance:
   m_ObjectHideFlags: 0
