@@ -11,7 +11,7 @@ namespace Controller
         public Text text;
         public InputField email;
         public InputField password;
-        public GameObject mainMenuCanvas;
+        public GameObject mainMenuCanvas; 
         public GameObject loginCanvas;
         public GameObject errorMessage;
 
