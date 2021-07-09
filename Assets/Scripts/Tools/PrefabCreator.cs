@@ -68,7 +68,7 @@ public class PrefabCreator : EditorWindow
     {
         Texture2D texture = Selection.activeObject as Texture2D;
 
-        ObjImporter newMesh = new ObjImporter();
+        // ObjImporter newMesh = new ObjImporter();
         
         if (texture == null)
         {
