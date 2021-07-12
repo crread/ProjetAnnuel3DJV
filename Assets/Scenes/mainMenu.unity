@@ -1472,7 +1472,7 @@ Camera:
   m_GameObject: {fileID: 482309155}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2334,14 +2334,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
-      propertyPath: canvasToOpen
-      value: 
-      objectReference: {fileID: 305338211}
-    - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
-        type: 3}
       propertyPath: buttonType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
+        type: 3}
+      propertyPath: canvasToOpen
+      value: 
+      objectReference: {fileID: 305338211}
     - target: {fileID: 3016419831339415277, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4135,14 +4135,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
-      propertyPath: canvasToOpen
-      value: 
-      objectReference: {fileID: 2751005}
-    - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
-        type: 3}
       propertyPath: buttonType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2100861172085374335, guid: 42a8893c3444f594e9f177788bdfe0c1,
+        type: 3}
+      propertyPath: canvasToOpen
+      value: 
+      objectReference: {fileID: 2751005}
     - target: {fileID: 3016419831339415277, guid: 42a8893c3444f594e9f177788bdfe0c1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6828,6 +6828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129899326}
   - component: {fileID: 2129899327}
+  - component: {fileID: 2129899328}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -6870,6 +6871,18 @@ MonoBehaviour:
   - {fileID: 1925447643}
   - {fileID: 641765331}
   - {fileID: 1974914027}
+--- !u!114 &2129899328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129899325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d442cb0e4adce0c438942661967f9e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2134280498
 GameObject:
   m_ObjectHideFlags: 0
