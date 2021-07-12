@@ -21,9 +21,4 @@
       <Path>obj</Path>
     </explicitExcludes>
   </component>
-  <component name="UserContentModel">
-    <attachedFolders />
-    <explicitIncludes />
-    <explicitExcludes />
-  </component>
 </project>

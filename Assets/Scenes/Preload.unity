@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 1315592929}
+  isLoaded: 0
 --- !u!114 &1315592929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,3 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNetworkAvailable: 0
+  requestTreated: 0
