@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
+using LinkGenerator;
 using UnityEditor;
 using UnityEditor.AI;
 using UnityEngine;
 using UnityEngine.AI;
+using Object = UnityEngine.Object;
 
 namespace Tools
 {
     public class CreateNavMeshsTool : EditorWindow
     {
 
-        private bool _noneNavmeshObjectInScene = true; 
+        private bool _noneNavmeshObjectInScene = true;
+        private NavMeshAssetManager _navMeshManager;
         
         [MenuItem("Window/navmeshs baker")]
         private static void Init()
@@ -18,7 +21,13 @@ namespace Tools
             window.minSize = new Vector2(300, 400);
             window.Show();
         }
-        
+
+        private void OnEnable()
+        {
+            if (_navMeshManager == null)
+                _navMeshManager = CreateInstance<NavMeshAssetManager>();
+        }
+
         private void OnGUI()
         {
             _noneNavmeshObjectInScene = true;
@@ -40,6 +49,15 @@ namespace Tools
                 var go = GameObject.Find("Navmesh Flag");
                 ClickManager(go);
             }
+            
+            if (GameObject.Find("Navmesh Minion") != null)
+            {
+                _noneNavmeshObjectInScene = false;
+                GUILayout.Label("Bake Minion navMesh", EditorStyles.boldLabel);
+                
+                var go = GameObject.Find("Navmesh Minion");
+                ClickManager(go);
+            }
 
             if (_noneNavmeshObjectInScene)
                 GUILayout.Label("None Navmesh implemented in the scene", EditorStyles.boldLabel);
@@ -54,7 +72,10 @@ namespace Tools
 
                 if (GameObject.Find("NavMesh Player") != null)
                     goArray.Add(GameObject.Find("NavMesh Player"));
-                
+
+                if (GameObject.Find("Navmesh Minion") != null)
+                    goArray.Add(GameObject.Find("Navmesh Minion"));
+
                 if (GUILayout.Button("Bake"))
                 {
                     foreach (var go in goArray)
@@ -93,16 +114,14 @@ namespace Tools
             var navMeshSurface = go.GetComponent<NavMeshSurface>();
             navMeshSurface.BuildNavMesh();
             Object[] surfaces = {navMeshSurface};
-            var navMeshManager = CreateInstance<NavMeshAssetManager>();
-            navMeshManager.StartBakingSurfaces(surfaces);
+            _navMeshManager.StartBakingSurfaces(surfaces);
         }
 
         private void Clear(GameObject go)
         {
             var navMeshSurface = go.GetComponent<NavMeshSurface>();
             Object[] surfaces = {navMeshSurface};
-            var navMeshManager = CreateInstance<NavMeshAssetManager>();
-            navMeshManager.ClearSurfaces(surfaces);
+            _navMeshManager.ClearSurfaces(surfaces);
         }
     }
 }

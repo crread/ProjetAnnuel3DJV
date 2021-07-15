@@ -192,7 +192,7 @@ namespace Game
                 layerMask = ~layerMask;
                 Physics.Raycast(ray, out var hit, float.MaxValue, layerMask);
 
-                if (hit.transform.gameObject.layer == 13)
+                if (hit.transform && hit.transform.gameObject.layer == 13)
                 {
                     _selectedFlag = hit.transform.gameObject.GetComponent<Flag.Flag>();
                     UpdateFieldsFlagMaximumCanvas(_selectedFlag);
@@ -204,7 +204,7 @@ namespace Game
 
                     UpdateFieldsMaximumCanvas();
                 }
-                else if (hit.transform.gameObject.layer == 9)
+                else if (hit.transform && hit.transform.gameObject.layer == 9)
                 {
                     player.GetComponent<NavMeshAgent>().destination = hit.point;
                 }

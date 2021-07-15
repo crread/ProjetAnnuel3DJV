@@ -61,8 +61,6 @@ namespace LinkGenerator
 
         }
 
-
-
         public void ClearLinks()
         {
             List< NavMeshLink > navMeshLinkList = GetComponentsInChildren<NavMeshLink> ( ).ToList ( );
@@ -110,9 +108,6 @@ namespace LinkGenerator
 
             Vector3 startPos = pos + normal * Vector3.forward * agentRadius * 2;
             Vector3 endPos = startPos - Vector3.up * maxJumpHeight * 1.1f;
-
-            //Debug.DrawLine ( pos + Vector3.right * 0.2f, endPos, Color.white, 2 );
-
 
             NavMeshHit navMeshHit;
             RaycastHit raycastHit = new RaycastHit();
@@ -278,7 +273,7 @@ namespace LinkGenerator
     
     #if UNITY_EDITOR
 
-    [CustomEditor( typeof( NavMeshLinks_AutoPlacer ) )]
+    [CustomEditor(typeof(NavMeshLinks_AutoPlacer))]
     [CanEditMultipleObjects]
     public class NavMeshLinks_AutoPlacer_Editor : Editor
     {
@@ -286,20 +281,30 @@ namespace LinkGenerator
         {
             DrawDefaultInspector();
 
-            if( GUILayout.Button( "Generate" ) )
+            if (GUILayout.Button("Generate"))
             {
-                foreach ( var targ in targets )
-                {
-                    ( ( NavMeshLinks_AutoPlacer ) targ ).Generate();
-                }
+                Generated();
             }
 
-            if ( GUILayout.Button ( "ClearLinks" ) )
+            if (GUILayout.Button("ClearLinks"))
             {
-                foreach ( var targ in targets )
-                {
-                    ( (NavMeshLinks_AutoPlacer)targ ).ClearLinks();
-                }
+                ClearLinkGenerated();
+            }
+        }
+        
+        public void Generated()
+        {
+            foreach (var targ in targets)
+            {
+                ((NavMeshLinks_AutoPlacer) targ).Generate();
+            }   
+        }
+
+        public void ClearLinkGenerated()
+        {
+            foreach (var targ in targets)
+            {
+                ((NavMeshLinks_AutoPlacer) targ).ClearLinks();
             }
         }
     }
