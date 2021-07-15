@@ -32,7 +32,7 @@ namespace Game.Minions
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _navMeshAgent.stoppingDistance = _stop_following;
             _navMeshAgent.autoRepath = true;
-            _navMeshAgent.radius = 0.5f;
+            _navMeshAgent.radius = 1f;
         }
 
         private void Update()
