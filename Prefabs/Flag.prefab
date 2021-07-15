@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1444791906088374718}
   - component: {fileID: 4987009568532482985}
   - component: {fileID: 5535313726206580356}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5776105547670824181}
   - component: {fileID: 5700947878438548323}
   - component: {fileID: 4326324419025143290}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DetectionMinionLeaveArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feb6405d42c8f14f914a13471f92ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flag: {fileID: 262787942122740279}
 --- !u!1 &6677809111174005538
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,9 +162,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4628453378325537092}
   - component: {fileID: 262787942122740279}
-  m_Layer: 0
+  - component: {fileID: 5755830513998903626}
+  - component: {fileID: 8775309252076399}
+  m_Layer: 13
   m_Name: Flag
-  m_TagString: Untagged
+  m_TagString: flag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,5 +198,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855600b2ec87a4b40b39663d014dd5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flagGameObject: {fileID: 6677809111174005538}
-  gameScript: {fileID: 0}
+  fireMinionsFollowing: 0
+  airMinionsFollowing: 0
+  earthMinionsFollowing: 0
+  waterMinionsFollowing: 0
+  currentId: 0
+--- !u!136 &5755830513998903626
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677809111174005538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5687208
+  m_Height: 3.003933
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &8775309252076399
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677809111174005538}
+  m_Enabled: 1
+  m_AgentTypeID: 287145453
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 0
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 2
+  m_ObstacleAvoidanceType: 4
