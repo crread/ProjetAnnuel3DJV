@@ -29,7 +29,7 @@ namespace Controller
         {
             if (_preload.GetComponent<DDOL>().networkManager.requestTreated)
             {
-                if (_preload.GetComponent<DDOL>().player.token != null)
+                if (_preload.GetComponent<DDOL>().player.name != null)
                 {
                     loginCanvas.SetActive(false);
                     mainMenuCanvas.SetActive(true);             
@@ -52,7 +52,12 @@ namespace Controller
             if (_preload.GetComponent<DDOL>().networkManager.isNetworkAvailable)
             {
                 LoginEntity loginData = new LoginEntity(email.text, password.text);
-                _preload.GetComponent<DDOL>().networkManager.GetUser(JsonConvert.SerializeObject(loginData));
+                
+                var form = new WWWForm();
+                form.AddField("email", loginData.email);
+                form.AddField("password", loginData.password);
+                
+                _preload.GetComponent<DDOL>().networkManager.GetUser(form);
             }
         }
 

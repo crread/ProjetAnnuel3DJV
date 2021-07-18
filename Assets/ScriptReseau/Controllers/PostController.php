@@ -50,8 +50,8 @@ class PostController extends ControllerCore
                     break;
                 default:
                     $this->errorRequest(array(
-                        'errorCode' => 400,
-                        'messageError' => "Cannot find that data",
+                        'httpCode' => 400,
+                        'message' => "Cannot find that data",
                     ));
                     break;
             }
@@ -59,8 +59,8 @@ class PostController extends ControllerCore
         else
         {
             $this->errorRequest(array(
-                'errorCode' => 404,
-                'messageError' => "Cannot find this",
+                'httpCode' => 404,
+                'message' => "Cannot find this",
             ));
         }
 

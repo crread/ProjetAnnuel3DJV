@@ -24,14 +24,14 @@ class MapController extends ControllerCore
 
         if ($responseModel != null)
         {
-            $this->dataToReturn['email'] = $responseModel['email'];
-            $this->dataToReturn['name'] = $responseModel['name'];
+            $this->dataToReturn['httpCode'] = 200;
+            $this->dataToReturn['message'] = "map created successfully";
         }
         else
         {
             $this->errorRequest(array(
-                'errorCode' => 404,
-                'messageError' => "This map doesn't exist"
+                'httpCode' => 404,
+                'message' => "This map doesn't exist"
             ));
         }
 
@@ -40,20 +40,18 @@ class MapController extends ControllerCore
 
     public function createMap()
     {
-        print_r($_FILES);
-
         $responseModel = $this->model->createMap($this->post);
 
         if ($responseModel != null)
         {
-            $this->dataToReturn['email'] = $responseModel['email'];
-            $this->dataToReturn['name'] = $responseModel['name'];
+            $this->dataToReturn['httpCode'] = 200;
+            $this->dataToReturn['message'] = "map created successfully";
         }
         else
         {
             $this->errorRequest(array(
-                'errorCode' => 500,
-                'messageError' => "cannot create this"
+                'httpCode' => 500,
+                'message' => "cannot create this"
             ));
         }
     }

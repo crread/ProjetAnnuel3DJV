@@ -8,6 +8,10 @@ namespace Scenes.MainMenu
         public GameObject mainMenuCanvas;
         public GameObject loginCanvas;
         public List<GameObject> lisNetworkMessageErrors = new List<GameObject>();
+
+        public GameObject loginGameObject;
+        public GameObject logoutGameObject;
+        public GameObject createAccountGameObject;
         
         private bool _currentNetworkState;
         private DDOL _ddol;
@@ -20,7 +24,7 @@ namespace Scenes.MainMenu
             ChangeNetworkMessageStatus();
             
             if (!_currentNetworkState || _ddol.isLoaded)
-            { 
+            {
                 loginCanvas.SetActive(false);
                 mainMenuCanvas.SetActive(true);
             }
@@ -37,6 +41,19 @@ namespace Scenes.MainMenu
             {
                 _currentNetworkState = _ddol.networkManager.isNetworkAvailable;
                 ChangeNetworkMessageStatus();
+            }
+            
+            if (_ddol.player.name != null)
+            {
+                logoutGameObject.SetActive(true);
+                loginGameObject.SetActive(false);
+                createAccountGameObject.SetActive(false);
+            }
+            else
+            {
+                logoutGameObject.SetActive(false);
+                loginGameObject.SetActive(true);
+                createAccountGameObject.SetActive(true);
             }
         }
 

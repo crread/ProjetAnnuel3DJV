@@ -8,6 +8,20 @@ require_once './Controllers/PostController.php';
 
 $controller = null;
 
+function neutralizeFieldsFromClients(array $fields)
+{
+    foreach ($fields as $key => $value)
+    {
+        if ($key != "password") {
+            $fields[$key] = htmlspecialchars($value);
+        }
+    }
+    return $fields;
+}
+
+$_GET = neutralizeFieldsFromClients($_GET);
+$_POST = neutralizeFieldsFromClients($_POST);
+
 switch($_SERVER['REQUEST_METHOD'])
 {
     case 'POST':

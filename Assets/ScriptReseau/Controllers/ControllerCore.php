@@ -20,17 +20,8 @@ class ControllerCore
         $this->request = $request;
         $this->dataToReturn = array();
 
-        $this->get = $this->neutralizeFieldsFromClients($_GET);
-        $this->post = $this->neutralizeFieldsFromClients($_POST);
-    }
-
-    private function neutralizeFieldsFromClients(array $fields)
-    {
-        foreach ($fields as $key => $value)
-        {
-            $fields[$key] = htmlspecialchars($value);
-        }
-        return $fields;
+        $this->get = $_GET;
+        $this->post = $_POST;
     }
 
     protected function redirectionWithUrl()
@@ -64,6 +55,8 @@ class ControllerCore
 
     protected function returnRequest()
     {
+        http_response_code($this->dataToReturn['httpCode']);
+
         header("Content-Type: application/json");
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST, GET");

@@ -19,28 +19,21 @@ class UserModel
     {
         $request = $this->pdo->prepare('SELECT email, name, password FROM user WHERE email = :email');
         $request->execute(array(':email' => $data['email']));
-        $responses = $request->fetchAll(PDOInstance::FETCH_ASSOC);
-
-        if (count($responses) > 0)
-        {
-            $password = password_hash($data['password'], PASSWORD_BCRYPT, array( 'cost' => 13));
-            foreach ($responses as $response)
-            {
-                if (password_verify($response['password'], $password))
-                {
-                    return $response;
-                }
-            }
-        }
-        return null;
+        return $request->fetch(PDOInstance::FETCH_ASSOC);
     }
 
     public function createUser($data)
     {
+        if ($this->getUser($data)) {
+            return "Already exist";
+        }
+
+        $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+
         $request = $this->pdo->prepare('INSERT INTO user(name, password, email) VALUES(:name, :password, :email)');
-        $response = $request->execute([':email' => $data['email'],
-                           ':password' => $data['password'],
-                           ':name' => "lel"]);
+        $response = $request->execute([':email' =>$data['email'],
+                           ':password' =>$data['password'],
+                           ':name' => $data['name']]);
 
         if ($response)
         {

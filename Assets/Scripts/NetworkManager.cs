@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 public class NetworkManager : MonoBehaviour
 {
     public bool isNetworkAvailable = false;
-    private string _html = "http://apiprojetannuel/api";
+    private string _html = "http://lasauce/";
     private UnityWebRequest _response;
 
     public bool requestTreated = false;
@@ -31,14 +31,13 @@ public class NetworkManager : MonoBehaviour
     /// <summary>
     ///   <para>Get user data from a request to an API or set error data.</para>
     /// </summary>
-    /// <param name="json"></param>
-    public void GetUser(string json)
+    /// <param name="form"></param>
+    public void GetUser(WWWForm form)
     {
-        StartCoroutine(PostRequestAsync($"{_html}/login", (UnityWebRequest req) =>
+        StartCoroutine(PostRequestAsync($"{_html}?entity=user&type=get", (UnityWebRequest req) =>
         {
             if (req.isNetworkError || req.isHttpError)
             {
-                // cannot reach the server
                 ManageErrors(req);
             }
             else
@@ -47,30 +46,28 @@ public class NetworkManager : MonoBehaviour
             }
 
             requestTreated = true;
-        }, json));
+        }, form));
     }
 
-    public void CreateAccount(string json)
+    public void CreateAccount(WWWForm form)
     {
-        StartCoroutine(PostRequestAsync($"{_html}/users", (UnityWebRequest req) =>
+        StartCoroutine(PostRequestAsync($"{_html}?entity=user&type=create", (UnityWebRequest req) =>
         {
+            Debug.Log(req.downloadHandler.text);
             if (req.isNetworkError || req.isHttpError)
             {
-                Debug.Log(req.error);
-                Debug.Log(req.error);
                 ManageErrors(req);
             }
             else
             {
-                // Debug.Log("YES BITCH");  
-                // GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
+                GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
             }
 
             requestTreated = true;
-        }, json));
+        }, form));
     }
 
-    public void UploadEndGameLevelData(string json)
+    public void UploadEndGameLevelData(WWWForm form)
     {
         StartCoroutine(PostRequestAsync($"{_html}/login", (UnityWebRequest req) =>
         {
@@ -83,7 +80,7 @@ public class NetworkManager : MonoBehaviour
             {
                 // GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
             }
-        }, json));
+        }, form));
     }
 
     private void ManageErrors(UnityWebRequest req)
@@ -105,16 +102,13 @@ public class NetworkManager : MonoBehaviour
     /// </summary>
     /// <param name="url"></param>
     /// <param name="callback"></param>
-    /// <param name="json"></param>
+    /// <param name="form"></param>
     
-    private static IEnumerator PostRequestAsync(string url, Action<UnityWebRequest> callback, string json)
+    private static IEnumerator PostRequestAsync(string url, Action<UnityWebRequest> callback, WWWForm form)
     {
-        using (UnityWebRequest request = UnityWebRequest.Post(url, "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Post(url, form))
         {
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
             yield return request.SendWebRequest();
             callback(request);
         }

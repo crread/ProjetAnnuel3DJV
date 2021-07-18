@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System.Collections.Generic;
 using LinkGenerator;
+
 using UnityEditor;
 using UnityEditor.AI;
 using UnityEngine;
@@ -125,3 +127,5 @@ namespace Tools
         }
     }
 }
+
+#endif

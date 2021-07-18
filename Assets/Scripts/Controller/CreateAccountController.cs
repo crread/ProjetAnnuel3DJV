@@ -37,7 +37,7 @@ namespace Controller
         {
             if (_ddol.networkManager.requestTreated)
             {
-                if (_ddol.player.token != null)
+                if (_ddol.player != null)
                 {
                     createAccountCanvas.SetActive(false);
                     mainMenuCanvas.SetActive(true);             
@@ -47,7 +47,7 @@ namespace Controller
                     errorMessage.SetActive(true);
                     errorMessage.GetComponent<Text>().text = _ddol.GetComponent<DDOL>().responseRequest.detail;
                 }
-
+                
                 _ddol.networkManager.requestTreated = false;
             }
         }
@@ -115,7 +115,12 @@ namespace Controller
         private void CreateUser()
         {
             PlayerCreateAccountEntity createAccountData = new PlayerCreateAccountEntity(email.text, password.text);
-            _ddol.networkManager.CreateAccount(JsonConvert.SerializeObject(createAccountData));
+            var form = new WWWForm();
+            form.AddField("email", createAccountData.email);
+            form.AddField("password", createAccountData.password);
+            form.AddField("name", createAccountData.name);
+            
+            _ddol.networkManager.CreateAccount(form);
         }
     }
 }

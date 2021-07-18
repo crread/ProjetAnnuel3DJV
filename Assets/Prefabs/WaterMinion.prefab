@@ -125,10 +125,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!195 &1995952287517510112
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -138,9 +138,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 8287228065424102385}
   m_Enabled: 1
   m_AgentTypeID: 65107623
-  m_Radius: 0.1
+  m_Radius: 1
   m_Speed: 7
-  m_Acceleration: 8
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 7

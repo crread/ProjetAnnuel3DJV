@@ -8,7 +8,7 @@ namespace Scenes.MainMenu
     public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public Text text;
-        public enum ListOfInteraction {Campaign, CustomGame, Editor, Login, Create, Options, Quit, Return};
+        public enum ListOfInteraction {Campaign, CustomGame, Editor, Login, Logout, Create, Options, Quit, Return};
         public ListOfInteraction buttonType;
         public GameObject canvasToOpen;
 
@@ -46,6 +46,9 @@ namespace Scenes.MainMenu
                 case ListOfInteraction.Return:
                     canvasToOpen.SetActive(true);
                     GetComponentInParent<Canvas>().gameObject.SetActive(false);
+                    break;
+                case ListOfInteraction.Logout:
+                    GameObject.Find("Preload").GetComponent<DDOL>().player.name = null;
                     break;
                 case ListOfInteraction.Quit :
                     Application.Quit();
