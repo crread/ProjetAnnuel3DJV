@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace Game.Minions
@@ -13,13 +11,10 @@ namespace Game.Minions
         public string typeMinion;
         
         private float _speed = 10f;
-
-        private float _stop_following = 5f;
-        
+        private float _stopFollowingPlayer = 5f;
+        private float _stopFollowingFlag = 2f;
         private Vector3 _velocity;
-
         private NavMeshAgent _navMeshAgent;
-
         private Game _gameManagerScript;
 
         private void Awake()
@@ -30,9 +25,9 @@ namespace Game.Minions
         private void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _navMeshAgent.stoppingDistance = _stop_following;
+            _navMeshAgent.stoppingDistance = _stopFollowingPlayer;
             _navMeshAgent.autoRepath = false;
-            _navMeshAgent.radius = 0.35f;
+            _navMeshAgent.radius = 0.55f;
         }
 
         private void FixedUpdate()
@@ -69,6 +64,12 @@ namespace Game.Minions
 
             positionObjectToFollow = newObjectToFollow;
             instanceIdObjectToFollow = instanceNewObjectToFollow;
+            
+            if (positionObjectToFollow.gameObject.CompareTag($"flag"))
+                _navMeshAgent.stoppingDistance = _stopFollowingFlag;
+            else
+                _navMeshAgent.stoppingDistance = _stopFollowingPlayer;
+            
         }
     }
 }

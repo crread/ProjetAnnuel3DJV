@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Text;
+using System.Collections.Generic;
 using Entity;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -49,6 +50,33 @@ public class NetworkManager : MonoBehaviour
         }, form));
     }
 
+    public void GetScores(WWWForm form, List<ScoreEntity> scores, List<ScoreEntity> score)
+    {
+        StartCoroutine(PostRequestAsync($"{_html}?entity=score&type=gets", (UnityWebRequest req) =>
+        {
+            if (req.isNetworkError || req.isHttpError)
+            {
+                ManageErrors(req);
+            }
+            else
+            {
+                JObject json = JObject.Parse(req.downloadHandler.text);
+
+                foreach (var item in json["score"])
+                {
+                    scores.Add(JsonConvert.DeserializeObject<ScoreEntity>(item.ToString()));
+                }
+                
+                if (json["personnalScore"] != null)
+                {
+                    score.Add(JsonConvert.DeserializeObject<ScoreEntity>(json["personnalScore"].ToString()));
+                }
+            }
+
+            requestTreated = true;
+        }, form));
+    }
+
     public void CreateAccount(WWWForm form)
     {
         StartCoroutine(PostRequestAsync($"{_html}?entity=user&type=create", (UnityWebRequest req) =>
@@ -64,22 +92,6 @@ public class NetworkManager : MonoBehaviour
             }
 
             requestTreated = true;
-        }, form));
-    }
-
-    public void UploadEndGameLevelData(WWWForm form)
-    {
-        StartCoroutine(PostRequestAsync($"{_html}/login", (UnityWebRequest req) =>
-        {
-            if (req.isNetworkError || req.isHttpError)
-            {
-                // cannot reach the server
-                ManageErrors(req);
-            }
-            else
-            {
-                // GetComponent<DDOL>().player = JsonConvert.DeserializeObject<PlayerEntity>(req.downloadHandler.text);
-            }
         }, form));
     }
 
@@ -120,7 +132,6 @@ public class NetworkManager : MonoBehaviour
     /// <param name="url"></param>
     /// <param name="callback"></param>
     /// <param name="param"></param>
-    
     private static IEnumerator GetRequest(string url, Action<UnityWebRequest> callback, string param = null)
     {
         using (UnityWebRequest request = UnityWebRequest.Get(url))

@@ -237,8 +237,9 @@ namespace Game
 
                         if (position != Vector3.negativeInfinity)
                         {
-                            Collider[] listCollider = Physics.OverlapSphere(player.playerTransform.position, 40,
+                            Collider[] listCollider = Physics.OverlapSphere(player.playerTransform.position, 100,
                                 LayerMask.GetMask("Minion"));
+                            position.y += 1;
                             GameObject newFlag = Instantiate(prefabFlag, position, Quaternion.identity);
                             Flag.Flag flagScript = newFlag.GetComponent<Flag.Flag>();
 
@@ -535,7 +536,7 @@ namespace Game
             {
                 var position = player.playerTransform.position;
                 player.ResetMaxFollowing();
-                Collider[] listCollider = Physics.OverlapSphere(position, 18, LayerMask.GetMask("Minion"));
+                Collider[] listCollider = Physics.OverlapSphere(position, 30, LayerMask.GetMask("Minion"));
                 foreach (var minion in listCollider)
                 {
                     var minionScript = minion.GetComponent<Minion>();
