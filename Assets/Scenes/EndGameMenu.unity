@@ -839,6 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966466497}
   - component: {fileID: 966466498}
+  - component: {fileID: 966466499}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -874,6 +875,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loseCanvas: {fileID: 312787861}
   winCanvas: {fileID: 546009537}
+--- !u!114 &966466499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966466496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9932d80e29eee44f9cedbffae02b2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winTitle: {fileID: 761153855}
+  loseTitle: {fileID: 1084494384}
+  replayButtonLose: {fileID: 701188450}
+  quitButtonLose: {fileID: 363888996}
+  replayButtonWin: {fileID: 733943501}
+  quitButtonWin: {fileID: 1565100434}
 --- !u!1 &1084494384
 GameObject:
   m_ObjectHideFlags: 0

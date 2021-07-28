@@ -13291,6 +13291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142227015}
   - component: {fileID: 1142227013}
+  - component: {fileID: 1142227014}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -13317,6 +13318,21 @@ MonoBehaviour:
   canvasManager: {fileID: 61588384}
   menuCanvas: {fileID: 575166709}
   timerInSeconds: 10
+--- !u!114 &1142227014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142227012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f6f6fae48c712429e7a8926496042d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuitButton: {fileID: 6363745569487116785}
+  RestartButton: {fileID: 6363745569487116784}
+  ContinuButton: {fileID: 6363745569487116783}
 --- !u!4 &1142227015
 Transform:
   m_ObjectHideFlags: 0
@@ -23261,6 +23277,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b8eb7a1ffe0906428eb99bbcd58d96a, type: 3}
+--- !u!1 &6363745569487116783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4446799454045329819, guid: 3b8eb7a1ffe0906428eb99bbcd58d96a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6363745569487116782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6363745569487116784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 827157045157858972, guid: 3b8eb7a1ffe0906428eb99bbcd58d96a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6363745569487116782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6363745569487116785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7433540003629231695, guid: 3b8eb7a1ffe0906428eb99bbcd58d96a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6363745569487116782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7818840766562418231
 PrefabInstance:
   m_ObjectHideFlags: 0
