@@ -14,9 +14,9 @@ namespace Translates
         {
             _ddol = GameObject.Find("Preload").GetComponent<DDOL>();
             
-            QuitButton.GetComponent<Text>().text = _ddol.translates.translation["game.menu.keepPlaying"];
+            QuitButton.GetComponent<Text>().text = _ddol.translates.translation["game.menu.quitGame"];
             RestartButton.GetComponent<Text>().text = _ddol.translates.translation["game.menu.restartGame"];
-            ContinuButton.GetComponent<Text>().text = _ddol.translates.translation["game.menu.quitGame"];
+            ContinuButton.GetComponent<Text>().text = _ddol.translates.translation["game.menu.keepPlaying"];
         }
     }
 }

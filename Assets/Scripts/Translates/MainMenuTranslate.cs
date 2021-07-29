@@ -28,6 +28,7 @@ namespace Translates
     
         public GameObject campaignMenuCampaign1;
         public GameObject campaignMenuCampaign2;
+        public GameObject campaignMenuCampaign3;
         public GameObject campaignMenuScoreBoardTitle;
         public GameObject campaignMenuQuit;
         public GameObject campaignMenuPlay;
@@ -85,6 +86,7 @@ namespace Translates
             
             campaignMenuCampaign1.GetComponent<Text>().text = $"{_ddol.translates.translation["campaign.campaign"]} 1";
             campaignMenuCampaign2.GetComponent<Text>().text = $"{_ddol.translates.translation["campaign.campaign"]} 2";
+            campaignMenuCampaign3.GetComponent<Text>().text = $"{_ddol.translates.translation["campaign.campaign"]} 3";
             campaignMenuScoreBoardTitle.GetComponent<Text>().text = _ddol.translates.translation["campaign.boardScoreTitle"];
             campaignMenuQuit.GetComponent<Text>().text = _ddol.translates.translation["campaign.quitCampaignMenu"];
             campaignMenuPlay.GetComponent<Text>().text = _ddol.translates.translation["campaign.playGame"];

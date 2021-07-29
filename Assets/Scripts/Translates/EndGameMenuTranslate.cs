@@ -24,7 +24,7 @@ namespace Translates
             replayButtonLose.GetComponent<Text>().text = _ddol.translates.translation["game.endGame.restart"];
             quitButtonLose.GetComponent<Text>().text = _ddol.translates.translation["game.endGame.quit"];
             replayButtonWin.GetComponent<Text>().text = _ddol.translates.translation["game.endGame.restart"];
-            quitButtonWin.GetComponent<Text>().text = _ddol.translates.translation["game.endGame.quit"];
+            quitButtonWin.GetComponent<Text>().text = _ddol.translates.translation["game.endGame.win.mainMenu"];
         }
     }
 }

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7516436690411034677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 78489953748664101, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 287563885193303046, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 520999060121799822, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003420409632267771, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088502349128038256, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487360035425116045, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933156321100906348, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193377662167032737, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840845738364482094, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438023889833841408, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529875796930172678, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949419165894830570, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071194122585402695, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422051068201557422, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_Name
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422051068201557422, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522903835486042116, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306064200576919774, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683986607333097530, guid: 56b3ff0cc6c71c8429175b57deabfb66,
+        type: 3}
+      propertyPath: m_TagString
+      value: terrain3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56b3ff0cc6c71c8429175b57deabfb66, type: 3}

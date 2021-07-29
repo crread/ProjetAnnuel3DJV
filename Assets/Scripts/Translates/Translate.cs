@@ -61,9 +61,33 @@ namespace Translates
             translation["game.menu.quitGame"] = "Quit";
             
             translation["game.endGame.win.title"] = "Congrulation, you achieved this map in : ";
+            translation["game.endGame.win.mainMenu"] = "Main menu";
             translation["game.endGame.lose.title"] = "You lose !";
             translation["game.endGame.restart"] = "Play again";
             translation["game.endGame.quit"] = "Quit";
+            
+            translation["editor.cameraControl"] = "Camera control";
+            translation["editor.mapSize"] = "Map size";
+            translation["editor.validMapSize"] = "Valid";
+            translation["editor.character"] = "Characters";
+            translation["editor.door"] = "Door";
+            
+            translation["editor.wall"] = "Wall";
+            translation["editor.subField"] = "Field";
+            translation["editor.field"] = "Field";
+            translation["editor.subWall"] = "Wall";
+            translation["editor.subMenuSelect"] = "Select";
+            
+            translation["editor.placeholder.json"] = "saved file path";
+            translation["editor.placeholder.nameFile"] = "Name file";
+            translation["editor.validPathButton"] = "Valid path";
+            
+            translation["editor.loadSceneButton"] = "Load Scene";
+            translation["editor.saveSceneButton"] = "Save Scene";
+            translation["editor.validNameButton"] = "Valid name";
+
+            translation["editor.disableElement"] = "Disable element";
+            translation["editor.enableElement"] = "Enable element";
         }
                 
         public void GenerateFrenchTranslate()
@@ -114,8 +138,32 @@ namespace Translates
             
             translation["game.endGame.win.title"] = "Félicitation, tu as fini le niveau en :";
             translation["game.endGame.lose.title"] = "Tu as perdu !";
+            translation["game.endGame.win.mainMenu"] = "Menu princpical";
             translation["game.endGame.restart"] = "Rejouer";
             translation["game.endGame.quit"] = "Quitter";
+
+            translation["editor.cameraControl"] = "Controle caméra";
+            translation["editor.mapSize"] = "taille de la carte";
+            translation["editor.validMapSize"] = "Validé";
+            translation["editor.character"] = "Personnages";
+            translation["editor.door"] = "Portes";
+            
+            translation["editor.wall"] = "Murs";
+            translation["editor.subField"] = "Terrain";
+            translation["editor.field"] = "Terrains";
+            translation["editor.subWall"] = "Mur";
+            translation["editor.subMenuSelect"] = "Choisir";
+            
+            translation["editor.placeholder.json"] = "Emplacement de la sauvegarde";
+            translation["editor.placeholder.nameFile"] = "Nom du fichier";
+            translation["editor.validPathButton"] = "Validé le chemin";
+            
+            translation["editor.loadSceneButton"] = "Chargé la scène";
+            translation["editor.saveSceneButton"] = "Sauvegardé la scène";
+            translation["editor.validNameButton"] = "Validé le nom";
+
+            translation["editor.disableElement"] = "Désactivé élément";
+            translation["editor.enableElement"] = "Activé élément";
         }
     }
 }
